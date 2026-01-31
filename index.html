@@ -70,13 +70,15 @@
       transform: scale(1.1); /* Slight zoom effect */
     }
 
-    /* ================== HEADER (FIXED) ================== */
+    /* ================== HEADER (SMART STICKY) ================== */
     .header {
       background: #fff;
       padding: 15px 0;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      position: sticky;
-      top: 0;
+      
+      /* FIXED: Relative on Mobile (Scrolls away) */
+      position: relative; 
+      
       z-index: 1000;
     }
 
@@ -283,6 +285,12 @@
       nav {
         margin-top: 0;
       }
+
+      /* FIXED: Make it Sticky ONLY on Laptop/PC */
+      .header {
+        position: sticky;
+        top: 0;
+      }
     }
   </style>
 </head>
@@ -469,8 +477,12 @@
         </div>
 
         <div>
-          <iframe class="map-frame" src="<iframe src="https://maps.app.goo.gl/HPTmsGtZq8NQfcJV8></iframe>" allowfullscreen=""
-            loading="lazy">
+          <iframe 
+            class="map-frame" 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d308.2962164512012!2d77.1671175!3d9.6040389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0655002d965275%3A0x2946e6fa16538252!2sHERBAL%20AYURVEDIC%20PANCHAKARMA%20MASSAGE%20CENTER%20AND%20SPA!5e1!3m2!1sen!2sin!4v1769837283668!5m2!1sen!2sin" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>
@@ -479,11 +491,9 @@
   </section>
 
   <footer>
-    <p>© 2026 Glowroot Wellness | Thekkady, KeralaPowered By MaxEfex</p>
+    <p>© 2026 Glowroot Wellness | Thekkady, Kerala | Powered By MaxEfex</p>
   </footer>
 
 </body>
 
 </html>
-
-
