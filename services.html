@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treatments & Pricing | Glowroot Wellness</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Georgia&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* ================== GLOBAL STYLES ================== */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      color: #222;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #0f5132;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    a {
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    /* ================== HEADER ================== */
+    .header {
+      background: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .brand-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .logo-img {
+      height: 60px;
+      width: auto;
+      margin-right: 15px;
+    }
+
+    .brand-text h2 {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      font-size: 20px;
+      color: #0f5132;
+    }
+
+    nav {
+      background: transparent;
+      padding: 0;
+      margin-top: 5px;
+    }
+
+    nav a {
+      color: #333;
+      margin: 0 10px;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      color: #0f5132;
+      border-bottom: 2px solid #d4af37;
+    }
+
+    nav a.active {
+      color: #0f5132;
+      border-bottom: 2px solid #d4af37;
+    }
+
+    /* ================== HERO ================== */
+    .page-hero {
+      background-color: #0f5132 !important;
+      /* This brings back the Green Box */
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      color: white;
+      margin: 0;
+      font-family: 'Poppins', sans-serif !important font-size: 36px;
+    }
+
+    .page-hero p {
+      color: #e0e0e0 !important;
+      /* This makes the small text White */
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    /* ================== PRICE TABLE ================== */
+    .price-section {
+      padding: 50px 0;
+      background: white;
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .price-table th {
+      background: #0f5132;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-family: 'Georgia', serif;
+    }
+
+    .price-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+      font-size: 15px;
+    }
+
+    .price-table tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    .price-table tr:hover {
+      background: #f0f7f4;
+    }
+
+    .price-col {
+      font-weight: bold;
+      color: #0f5132;
+    }
+
+    /* ================== DESCRIPTIONS GRID ================== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid #d4af37;
+    }
+
+    .info-card h3 {
+      margin-top: 0;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ================== PACKAGES (SPECIAL) ================== */
+    .package-box {
+      background: #0f5132;
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .package-box h2 {
+      color: #d4af37;
+      margin-top: 0;
+    }
+
+    .package-box p {
+      color: #e0e0e0;
+    }
+
+    .package-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .package-list li {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .price-tag {
+      background: #d4af37;
+      color: black;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    /* ================== FOOTER ================== */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 12px;
+    }
+
+    /* LAPTOP VIEW */
+    @media (min-width: 768px) {
+      .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      nav {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <div class="brand-box">
+        <img src="glowrootlogo.png" alt="Logo" class="logo-img">
+        <div class="brand-text">
+          <h2>GLOWROOT WELLNESS</h2>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Treatments & Menu</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Our Therapies & Pricing</h1>
+      <p>Authentic Kerala Ayurveda | Certified Experts | Genuine Herbal Oils</p>
+    </div>
+  </section>
+
+  <section class="price-section">
+    <div class="container">
+      <h2 style="text-align: center; font-family: 'Georgia', serif;">Therapy Menu</h2>
+      <div style="overflow-x: auto;">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Therapy Name</th>
+              <th>Duration</th>
+              <th>Price (INR)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Herbal Ayurveda</td>
+              <td>60 min</td>
+              <td class="price-col">2,000/-</td>
+            </tr>
+            <tr>
+              <td>Special Massage</td>
+              <td>60 min</td>
+              <td class="price-col">1,900/-</td>
+            </tr>
+            <tr>
+              <td>Kalari Massage</td>
+              <td>60 min</td>
+              <td class="price-col">2,300/-</td>
+            </tr>
+            <tr>
+              <td>Marma Massage</td>
+              <td>60 min</td>
+              <td class="price-col">2,000/-</td>
+            </tr>
+            <tr>
+              <td>Aroma Massage</td>
+              <td>60 min</td>
+              <td class="price-col">2,200/-</td>
+            </tr>
+            <tr>
+              <td>Herbal Special Signature Massage</td>
+              <td>90 min</td>
+              <td class="price-col">3,000/-</td>
+            </tr>
+            <tr>
+              <td>Sampoorna Ayurveda Massage</td>
+              <td>60 min</td>
+              <td class="price-col">2,000/-</td>
+            </tr>
+            <tr>
+              <td>Rejuvenation Therapy</td>
+              <td>60 min</td>
+              <td class="price-col">2,300/-</td>
+            </tr>
+            <tr>
+              <td>Relaxing Massage</td>
+              <td>60 min</td>
+              <td class="price-col">1,800/-</td>
+            </tr>
+            <tr>
+              <td>Deep Tissue Massage</td>
+              <td>60 min</td>
+              <td class="price-col">2,400/-</td>
+            </tr>
+            <tr>
+              <td>Head & Shoulder Massage</td>
+              <td>30 min</td>
+              <td class="price-col">1,000/-</td>
+            </tr>
+            <tr>
+              <td>Back & Neck Massage</td>
+              <td>45 min</td>
+              <td class="price-col">1,500/-</td>
+            </tr>
+            <tr>
+              <td>Medicated Steam Bath</td>
+              <td>15 min</td>
+              <td class="price-col">500/-</td>
+            </tr>
+            <tr>
+              <td>Swedish Massage</td>
+              <td>60 min</td>
+              <td class="price-col">2,400/-</td>
+            </tr>
+            <tr>
+              <td>Hot Stone Massage</td>
+              <td>60 min</td>
+              <td class="price-col">2,000/-</td>
+            </tr>
+            <tr>
+              <td>Candle Massage</td>
+              <td>60 min</td>
+              <td class="price-col">3,000/-</td>
+            </tr>
+            <tr>
+              <td>Cupping Massage</td>
+              <td>60 min</td>
+              <td class="price-col">3,000/-</td>
+            </tr>
+            <tr>
+              <td>Sports Massage</td>
+              <td>60 min</td>
+              <td class="price-col">2,600/-</td>
+            </tr>
+            <tr>
+              <td>Shiro Abhyangam</td>
+              <td>30 min</td>
+              <td class="price-col">1,000/-</td>
+            </tr>
+            <tr>
+              <td>Shirodhara</td>
+              <td>60 min</td>
+              <td class="price-col">3,000/-</td>
+            </tr>
+            <tr>
+              <td>Kizhi (Ela / Podi / Njavara)</td>
+              <td>60 min</td>
+              <td class="price-col">2,600 - 3,250/-</td>
+            </tr>
+            <tr>
+              <td>Herbal Facial</td>
+              <td>60 min</td>
+              <td class="price-col">2,000/-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="package-box">
+      <h2>🏆 Herbal Ayurvedic Special Package</h2>
+      <p>Complete rejuvenation for body and mind. Best value for tourists.</p>
+      <ul class="package-list">
+        <li>✅ Full Body Massage</li>
+        <li>✅ Hot Stone Massage</li>
+        <li>✅ Full Body Scrub</li>
+        <li>✅ Full Body Pack</li>
+      </ul>
+      <h3>Duration: 120 Min <span class="price-tag">INR 4,500/-</span></h3>
+      <br>
+      <p style="font-size: 14px; color: #d4af37;">* Couple Packages & Family Packages also available on request.</p>
+      <a href="https://wa.me/918943150767"
+        style="background: white; color: #0f5132; padding: 10px 20px; border-radius: 20px; display: inline-block; margin-top: 20px; font-weight: bold;">Book
+        This Package</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align: center; font-family: 'Georgia', serif;">Fairness & Skin Therapies</h2>
+      <div class="info-grid">
+
+        <div class="info-card">
+          <h3>Chandhana Kulirma Therapy</h3>
+          <p>100% Pure Sandal Powder + Sandal Oil. Hair to feet massage + Medicated Steam Bath.</p>
+          <p><strong>80 Min | INR 1,500/-</strong></p>
+        </div>
+
+        <div class="info-card">
+          <h3>Multani Mitti Therapy</h3>
+          <p>Multani Mitti + Jasmine Oil + Rose Water. Hair to feet massage + Medicated Steam Bath.</p>
+          <p><strong>70 Min | INR 1,100/-</strong></p>
+        </div>
+
+        <div class="info-card">
+          <h3>Venma Fairness Therapy</h3>
+          <p>Green Gram Powder + Rose Water. Hair to feet massage + Medicated Steam Bath.</p>
+          <p><strong>80 Min | INR 1,500/-</strong></p>
+        </div>
+
+        <div class="info-card">
+          <h3>Head & Face Massage</h3>
+          <p>Sandal Cream + Jasmine Oil. Relaxing massage for face and scalp.</p>
+          <p><strong>30 Min | INR 500/-</strong></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #f9f9f9;">
+    <div class="container">
+      <h2 style="text-align: center; font-family: 'Georgia', serif;">About Our Therapies</h2>
+      <div class="info-grid">
+
+        <div class="info-card" style="border-left-color: #0f5132;">
+          <h3>Abhyangam (Massage)</h3>
+          <p>Abhyanga is a holistic treatment that nourishes your body with healing touch. It improves blood
+            circulation, relieves pain, tension, and travel fatigue.</p>
+        </div>
+
+        <div class="info-card" style="border-left-color: #0f5132;">
+          <h3>Shirodhara</h3>
+          <p>An ancient therapy where warm medicated oil is poured in a continuous stream over the forehead ('third
+            eye'). Excellent for stress, anxiety, depression, insomnia, and mental fatigue.</p>
+        </div>
+
+        <div class="info-card" style="border-left-color: #0f5132;">
+          <h3>Potli Massage (Kizhi)</h3>
+          <p>Uses small herbal pouches made of various herbs warmed in herbal oils. Great for osteoarthritis, arthritis
+            with swelling, spondylosis, and sports injuries.</p>
+        </div>
+
+        <div class="info-card" style="border-left-color: #0f5132;">
+          <h3>Pizhichil</h3>
+          <p>Lukewarm medicated oil is applied to the body while lying on the pathi. The oil is squeezed by hand over
+            the body at a defined height in a rhythmic style. A classic rejuvenation and anti-aging therapy.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Glowroot Wellness | Thekkady, Kerala</p>
+  </footer>
+
+</body>
+
+</html>

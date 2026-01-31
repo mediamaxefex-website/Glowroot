@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery | Glowroot Wellness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Georgia&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* Paste your Global Styles/CSS here or link to style.css */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      color: #222;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Header Styles */
+    .header {
+      background: #fff;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .logo-img {
+      height: 60px;
+      width: auto;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #333;
+      margin: 0 10px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: #0f5132;
+    }
+
+    nav a.active {
+      color: #0f5132;
+      border-bottom: 2px solid #d4af37;
+    }
+
+    /* GALLERY GRID FIXES */
+    .gallery-section {
+      padding: 40px 0;
+    }
+
+    .gallery-title {
+      text-align: center;
+      color: #0f5132;
+      font-family: 'Georgia', serif;
+      margin-bottom: 30px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      /* This makes sure photos are big enough on mobile */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      width: 100%;
+      height: auto;
+      /* FIXED: Lets the image grow naturally so it is not cropped */
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <img src="glowrootlogo.png" alt="Logo" class="logo-img">
+      <br>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="gallery-section">
+    <div class="container">
+      <h2 class="gallery-title">Our Clinic Interiors</h2>
+      <div class="gallery-grid">
+        <img src="images/clinic1.jpeg" class="gallery-item">
+        <img src="images/clinic2.jpeg" class="gallery-item">
+        <img src="images/clinic3.jpeg" class="gallery-item">
+        <img src="images/clinic4.jpeg" class="gallery-item">
+        <img src="images/clinic5.jpeg" class="gallery-item">
+        <img src="images/clinic6.jpeg" class="gallery-item">
+        <img src="images/clinic7.jpeg" class="gallery-item">
+        <img src="images/clinic8.jpeg" class="gallery-item">
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" style="background: white;">
+    <div class="container">
+      <h2 class="gallery-title">Massage & Therapies</h2>
+      <div class="gallery-grid">
+        <img src="images/massage1.jpeg" class="gallery-item">
+        <img src="images/massage2.jpeg" class="gallery-item">
+        <img src="images/massage3.jpeg" class="gallery-item">
+        <img src="images/massage4.jpeg" class="gallery-item">
+        <img src="images/massage5.jpeg" class="gallery-item">
+        <img src="images/massage6.jpeg" class="gallery-item">
+        <img src="images/massage7.jpeg" class="gallery-item">
+        <img src="images/massage8.jpeg" class="gallery-item">
+        <img src="images/massage9.jpeg" class="gallery-item">
+        <img src="images/massage10.jpeg" class="gallery-item">
+        <img src="images/massage11.jpeg" class="gallery-item">
+        <img src="images/massage12.jpeg" class="gallery-item">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Glowroot Wellness Tech and Powered by MAXEFEX</p>
+  </footer>
+
+</body>
+
+</html>
