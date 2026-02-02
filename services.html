@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Georgia&display=swap"
     rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <style>
     /* ================== GLOBAL STYLES ================== */
@@ -20,27 +22,10 @@
       color: #222;
     }
 
-    h1,
-    h2,
-    h3 {
-      color: #0f5132;
-    }
-
-    p {
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    a {
-      text-decoration: none;
-      transition: 0.3s;
-    }
+    h1, h2, h3 { color: #0f5132; }
+    p { line-height: 1.6; color: #555; }
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+    a { text-decoration: none; transition: 0.3s; }
 
     /* ================== HEADER ================== */
     .header {
@@ -66,25 +51,10 @@
       margin-bottom: 10px;
     }
 
-    .logo-img {
-      height: 60px;
-      width: auto;
-      margin-right: 15px;
-    }
+    .logo-img { height: 60px; width: auto; margin-right: 15px; }
+    .brand-text h2 { margin: 0; font-family: 'Georgia', serif; font-size: 20px; color: #0f5132; }
 
-    .brand-text h2 {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      font-size: 20px;
-      color: #0f5132;
-    }
-
-    nav {
-      background: transparent;
-      padding: 0;
-      margin-top: 5px;
-    }
-
+    nav { margin-top: 5px; }
     nav a {
       color: #333;
       margin: 0 10px;
@@ -94,38 +64,17 @@
       padding-bottom: 5px;
       border-bottom: 2px solid transparent;
     }
-
-    nav a:hover {
-      color: #0f5132;
-      border-bottom: 2px solid #d4af37;
-    }
-
-    nav a.active {
-      color: #0f5132;
-      border-bottom: 2px solid #d4af37;
-    }
+    nav a:hover, nav a.active { color: #0f5132; border-bottom: 2px solid #d4af37; }
 
     /* ================== HERO ================== */
     .page-hero {
-      background-color: #0f5132 !important;
-      /* This brings back the Green Box */
+      background-color: #0f5132;
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
-
-    .page-hero h1 {
-      color: white;
-      margin: 0;
-      font-family: 'Poppins', sans-serif !important font-size: 36px;
-    }
-
-    .page-hero p {
-      color: #e0e0e0 !important;
-      /* This makes the small text White */
-      font-size: 14px;
-      margin-top: 10px;
-    }
+    .page-hero h1 { color: white; margin: 0; font-size: 32px; }
+    .page-hero p { color: #e0e0e0; font-size: 14px; margin-top: 10px; }
 
     /* ================== PRICE TABLE ================== */
     .price-section {
@@ -138,6 +87,7 @@
       border-collapse: collapse;
       margin-top: 20px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      background: white;
     }
 
     .price-table th {
@@ -154,25 +104,18 @@
       font-size: 15px;
     }
 
-    .price-table tr:nth-child(even) {
-      background: #f9f9f9;
-    }
+    .price-table tr:nth-child(even) { background: #f9f9f9; }
+    .price-table tr:hover { background: #f0f7f4; }
+    .price-col { font-weight: bold; color: #0f5132; }
 
-    .price-table tr:hover {
-      background: #f0f7f4;
-    }
-
-    .price-col {
-      font-weight: bold;
-      color: #0f5132;
-    }
-
-    /* ================== DESCRIPTIONS GRID ================== */
+    /* ================== CARDS & GRIDS ================== */
+    .section { padding: 50px 20px; }
+    
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     .info-card {
@@ -180,53 +123,93 @@
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      border-left: 4px solid #d4af37;
+      border-top: 5px solid #0f5132;
+      text-align: center;
     }
 
     .info-card h3 {
-      margin-top: 0;
-      font-size: 20px;
+      font-size: 18px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      margin-bottom: 10px;
     }
 
-    /* ================== PACKAGES (SPECIAL) ================== */
-    .package-box {
+    .price-text {
+      font-size: 18px;
+      font-weight: bold;
+      color: #222;
+      margin: 15px 0;
+    }
+
+    /* ================== ENQUIRY BUTTONS ================== */
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-enquiry {
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+    }
+
+    .btn-call {
+      border: 1px solid #0f5132;
+      color: #0f5132;
+      background: white;
+    }
+    .btn-call:hover { background: #0f5132; color: white; }
+
+    .btn-whatsapp {
       background: #0f5132;
       color: white;
-      padding: 40px;
+    }
+    .btn-whatsapp:hover { background: #0b3d26; }
+
+    /* ================== SPECIAL PACKAGES ================== */
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .package-box {
+      background: #fff;
+      border: 2px solid #0f5132;
+      padding: 30px;
       border-radius: 15px;
       text-align: center;
-      margin-top: 50px;
     }
 
-    .package-box h2 {
-      color: #d4af37;
-      margin-top: 0;
-    }
-
-    .package-box p {
-      color: #e0e0e0;
-    }
-
+    .package-box h2 { color: #0f5132; margin-top: 0; font-size: 22px; }
+    
     .package-list {
       list-style: none;
       padding: 0;
       margin: 20px 0;
+      text-align: left;
+      display: inline-block;
     }
+    .package-list li { margin: 8px 0; font-size: 15px; color: #444; }
 
-    .package-list li {
-      margin: 10px 0;
-      font-size: 18px;
-    }
-
-    .price-tag {
-      background: #d4af37;
-      color: black;
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-weight: bold;
-      margin-left: 10px;
+    /* ================== DISCLAIMER ================== */
+    .disclaimer-box {
+      text-align: center;
+      background: #fff3cd;
+      color: #856404;
+      padding: 15px;
+      margin: 30px auto;
+      border-radius: 8px;
+      max-width: 800px;
+      font-size: 14px;
+      border: 1px solid #ffeeba;
     }
 
     /* ================== FOOTER ================== */
@@ -239,16 +222,17 @@
       font-size: 12px;
     }
 
-    /* LAPTOP VIEW */
-    @media (min-width: 768px) {
-      .header-content {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+    .disclaimer-text {
+      font-size: 11px;
+      color: #666;
+      margin-top: 15px;
+      display: block;
+      line-height: 1.5;
+    }
 
-      nav {
-        margin-top: 0;
-      }
+    @media (min-width: 768px) {
+      .header-content { flex-direction: row; justify-content: space-between; }
+      nav { margin-top: 0; }
     }
   </style>
 </head>
@@ -266,6 +250,7 @@
       <nav>
         <a href="index.html">Home</a>
         <a href="services.html" class="active">Treatments & Menu</a>
+        <a href="gallery.html">Gallery</a>
         <a href="index.html#contact">Contact</a>
       </nav>
     </div>
@@ -273,8 +258,8 @@
 
   <section class="page-hero">
     <div class="container">
-      <h1>Our Therapies & Pricing</h1>
-      <p>Authentic Kerala Ayurveda | Certified Experts | Genuine Herbal Oils</p>
+      <h1>Treatments & Special Offers</h1>
+      <p>Authentic Kerala Ayurveda | Certified Experts</p>
     </div>
   </section>
 
@@ -291,142 +276,34 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Herbal Ayurveda</td>
-              <td>60 min</td>
-              <td class="price-col">2,000/-</td>
-            </tr>
-            <tr>
-              <td>Special Massage</td>
-              <td>60 min</td>
-              <td class="price-col">1,900/-</td>
-            </tr>
-            <tr>
-              <td>Kalari Massage</td>
-              <td>60 min</td>
-              <td class="price-col">2,300/-</td>
-            </tr>
-            <tr>
-              <td>Marma Massage</td>
-              <td>60 min</td>
-              <td class="price-col">2,000/-</td>
-            </tr>
-            <tr>
-              <td>Aroma Massage</td>
-              <td>60 min</td>
-              <td class="price-col">2,200/-</td>
-            </tr>
-            <tr>
-              <td>Herbal Special Signature Massage</td>
-              <td>90 min</td>
-              <td class="price-col">3,000/-</td>
-            </tr>
-            <tr>
-              <td>Sampoorna Ayurveda Massage</td>
-              <td>60 min</td>
-              <td class="price-col">2,000/-</td>
-            </tr>
-            <tr>
-              <td>Rejuvenation Therapy</td>
-              <td>60 min</td>
-              <td class="price-col">2,300/-</td>
-            </tr>
-            <tr>
-              <td>Relaxing Massage</td>
-              <td>60 min</td>
-              <td class="price-col">1,800/-</td>
-            </tr>
-            <tr>
-              <td>Deep Tissue Massage</td>
-              <td>60 min</td>
-              <td class="price-col">2,400/-</td>
-            </tr>
-            <tr>
-              <td>Head & Shoulder Massage</td>
-              <td>30 min</td>
-              <td class="price-col">1,000/-</td>
-            </tr>
-            <tr>
-              <td>Back & Neck Massage</td>
-              <td>45 min</td>
-              <td class="price-col">1,500/-</td>
-            </tr>
-            <tr>
-              <td>Medicated Steam Bath</td>
-              <td>15 min</td>
-              <td class="price-col">500/-</td>
-            </tr>
-            <tr>
-              <td>Swedish Massage</td>
-              <td>60 min</td>
-              <td class="price-col">2,400/-</td>
-            </tr>
-            <tr>
-              <td>Hot Stone Massage</td>
-              <td>60 min</td>
-              <td class="price-col">2,000/-</td>
-            </tr>
-            <tr>
-              <td>Candle Massage</td>
-              <td>60 min</td>
-              <td class="price-col">3,000/-</td>
-            </tr>
-            <tr>
-              <td>Cupping Massage</td>
-              <td>60 min</td>
-              <td class="price-col">3,000/-</td>
-            </tr>
-            <tr>
-              <td>Sports Massage</td>
-              <td>60 min</td>
-              <td class="price-col">2,600/-</td>
-            </tr>
-            <tr>
-              <td>Shiro Abhyangam</td>
-              <td>30 min</td>
-              <td class="price-col">1,000/-</td>
-            </tr>
-            <tr>
-              <td>Shirodhara</td>
-              <td>60 min</td>
-              <td class="price-col">3,000/-</td>
-            </tr>
-            <tr>
-              <td>Kizhi (Ela / Podi / Njavara)</td>
-              <td>60 min</td>
-              <td class="price-col">2,600 - 3,250/-</td>
-            </tr>
-            <tr>
-              <td>Herbal Facial</td>
-              <td>60 min</td>
-              <td class="price-col">2,000/-</td>
-            </tr>
+            <tr><td>Herbal Ayurveda</td><td>60 min</td><td class="price-col">2,000/-</td></tr>
+            <tr><td>Special Massage</td><td>60 min</td><td class="price-col">1,900/-</td></tr>
+            <tr><td>Kalari Massage</td><td>60 min</td><td class="price-col">2,300/-</td></tr>
+            <tr><td>Marma Massage</td><td>60 min</td><td class="price-col">2,000/-</td></tr>
+            <tr><td>Aroma Massage</td><td>60 min</td><td class="price-col">2,200/-</td></tr>
+            <tr><td>Herbal Special Signature Massage</td><td>90 min</td><td class="price-col">3,000/-</td></tr>
+            <tr><td>Sampoorna Ayurveda Massage</td><td>60 min</td><td class="price-col">2,000/-</td></tr>
+            <tr><td>Rejuvenation Therapy</td><td>60 min</td><td class="price-col">2,300/-</td></tr>
+            <tr><td>Relaxing Massage</td><td>60 min</td><td class="price-col">1,800/-</td></tr>
+            <tr><td>Deep Tissue Massage</td><td>60 min</td><td class="price-col">2,400/-</td></tr>
+            <tr><td>Head & Shoulder Massage</td><td>30 min</td><td class="price-col">1,000/-</td></tr>
+            <tr><td>Back & Neck Massage</td><td>45 min</td><td class="price-col">1,500/-</td></tr>
+            <tr><td>Medicated Steam Bath</td><td>15 min</td><td class="price-col">500/-</td></tr>
+            <tr><td>Swedish Massage</td><td>60 min</td><td class="price-col">2,400/-</td></tr>
+            <tr><td>Hot Stone Massage</td><td>60 min</td><td class="price-col">2,000/-</td></tr>
+            <tr><td>Candle Massage</td><td>60 min</td><td class="price-col">3,000/-</td></tr>
+            <tr><td>Cupping Massage</td><td>60 min</td><td class="price-col">3,000/-</td></tr>
+            <tr><td>Sports Massage</td><td>60 min</td><td class="price-col">2,600/-</td></tr>
+            <tr><td>Shiro Abhyangam</td><td>30 min</td><td class="price-col">1,000/-</td></tr>
+            <tr><td>Shirodhara</td><td>60 min</td><td class="price-col">3,000/-</td></tr>
+            <tr><td>Kizhi (Ela / Podi / Njavara)</td><td>60 min</td><td class="price-col">2,600 - 3,250/-</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
 
-  <section class="container">
-    <div class="package-box">
-      <h2>🏆 Herbal Ayurvedic Special Package</h2>
-      <p>Complete rejuvenation for body and mind. Best value for tourists.</p>
-      <ul class="package-list">
-        <li>✅ Full Body Massage</li>
-        <li>✅ Hot Stone Massage</li>
-        <li>✅ Full Body Scrub</li>
-        <li>✅ Full Body Pack</li>
-      </ul>
-      <h3>Duration: 120 Min <span class="price-tag">INR 4,500/-</span></h3>
-      <br>
-      <p style="font-size: 14px; color: #d4af37;">* Couple Packages & Family Packages also available on request.</p>
-      <a href="https://wa.me/918943150767"
-        style="background: white; color: #0f5132; padding: 10px 20px; border-radius: 20px; display: inline-block; margin-top: 20px; font-weight: bold;">Book
-        This Package</a>
-    </div>
-  </section>
-
-  <section class="section">
+  <section class="section" style="background: #f8f9fa;">
     <div class="container">
       <h2 style="text-align: center; font-family: 'Georgia', serif;">Fairness & Skin Therapies</h2>
       <div class="info-grid">
@@ -434,68 +311,89 @@
         <div class="info-card">
           <h3>Chandhana Kulirma Therapy</h3>
           <p>100% Pure Sandal Powder + Sandal Oil. Hair to feet massage + Medicated Steam Bath.</p>
-          <p><strong>80 Min | INR 1,500/-</strong></p>
+          <div class="price-text">60 Min | INR 2,000/-</div>
+          <div class="btn-group">
+            <a href="tel:+918943150767" class="btn-enquiry btn-call"><i class="fas fa-phone"></i> Call</a>
+            <a href="https://wa.me/918943150767" class="btn-enquiry btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
         </div>
 
         <div class="info-card">
           <h3>Multani Mitti Therapy</h3>
           <p>Multani Mitti + Jasmine Oil + Rose Water. Hair to feet massage + Medicated Steam Bath.</p>
-          <p><strong>70 Min | INR 1,100/-</strong></p>
+          <div class="price-text">60 Min | INR 1,800/-</div>
+          <div class="btn-group">
+            <a href="tel:+918943150767" class="btn-enquiry btn-call"><i class="fas fa-phone"></i> Call</a>
+            <a href="https://wa.me/918943150767" class="btn-enquiry btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
         </div>
 
         <div class="info-card">
           <h3>Venma Fairness Therapy</h3>
           <p>Green Gram Powder + Rose Water. Hair to feet massage + Medicated Steam Bath.</p>
-          <p><strong>80 Min | INR 1,500/-</strong></p>
-        </div>
-
-        <div class="info-card">
-          <h3>Head & Face Massage</h3>
-          <p>Sandal Cream + Jasmine Oil. Relaxing massage for face and scalp.</p>
-          <p><strong>30 Min | INR 500/-</strong></p>
+          <div class="price-text">60 Min | INR 1,600/-</div>
+          <div class="btn-group">
+            <a href="tel:+918943150767" class="btn-enquiry btn-call"><i class="fas fa-phone"></i> Call</a>
+            <a href="https://wa.me/918943150767" class="btn-enquiry btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <section class="section" style="background: #f9f9f9;">
+  <section class="section" style="background: #f0f7f4;">
     <div class="container">
-      <h2 style="text-align: center; font-family: 'Georgia', serif;">About Our Therapies</h2>
-      <div class="info-grid">
-
-        <div class="info-card" style="border-left-color: #0f5132;">
-          <h3>Abhyangam (Massage)</h3>
-          <p>Abhyanga is a holistic treatment that nourishes your body with healing touch. It improves blood
-            circulation, relieves pain, tension, and travel fatigue.</p>
+      <h2 style="text-align: center; font-family: 'Georgia', serif; margin-bottom: 40px;">Special Packages</h2>
+      
+      <div class="package-grid">
+        <div class="package-box">
+          <h2>👨‍👩‍👧‍👦 Family Package</h2>
+          <p>Complete relaxation for the whole family.</p>
+          <ul class="package-list">
+            <li>✅ Full Body Ayurvedic Massage</li>
+            <li>✅ Podikizhi (Herbal Bundle)</li>
+            <li>✅ Shirodhara (Oil Pouring)</li>
+            <li>✅ <strong>Steam Bath</strong></li>
+          </ul>
+          <div class="price-text">Duration: 100 Min <br> <span style="color:#d4af37; font-size:24px;">INR 7,000/-</span></div>
+          <div class="btn-group">
+            <a href="tel:+918943150767" class="btn-enquiry btn-call"><i class="fas fa-phone"></i> Call</a>
+            <a href="https://wa.me/918943150767" class="btn-enquiry btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
         </div>
 
-        <div class="info-card" style="border-left-color: #0f5132;">
-          <h3>Shirodhara</h3>
-          <p>An ancient therapy where warm medicated oil is poured in a continuous stream over the forehead ('third
-            eye'). Excellent for stress, anxiety, depression, insomnia, and mental fatigue.</p>
+        <div class="package-box">
+          <h2>💑 Couple Package</h2>
+          <p>A romantic and rejuvenating experience.</p>
+          <ul class="package-list">
+            <li>✅ Vajeekarana Therapy (Stamina)</li>
+            <li>✅ Aroma Oil Massage</li>
+            <li>✅ Ayurvedic Facial</li>
+          </ul>
+          <div class="price-text">Duration: 60 Min <br> <span style="color:#d4af37; font-size:24px;">INR 3,500/-</span></div>
+          <div class="btn-group">
+            <a href="tel:+918943150767" class="btn-enquiry btn-call"><i class="fas fa-phone"></i> Call</a>
+            <a href="https://wa.me/918943150767" class="btn-enquiry btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
         </div>
-
-        <div class="info-card" style="border-left-color: #0f5132;">
-          <h3>Potli Massage (Kizhi)</h3>
-          <p>Uses small herbal pouches made of various herbs warmed in herbal oils. Great for osteoarthritis, arthritis
-            with swelling, spondylosis, and sports injuries.</p>
-        </div>
-
-        <div class="info-card" style="border-left-color: #0f5132;">
-          <h3>Pizhichil</h3>
-          <p>Lukewarm medicated oil is applied to the body while lying on the pathi. The oil is squeezed by hand over
-            the body at a defined height in a rhythmic style. A classic rejuvenation and anti-aging therapy.</p>
-        </div>
-
       </div>
     </div>
   </section>
+
+  <div class="container">
+    <div class="disclaimer-box">
+      <strong>⚠️ Note:</strong> Prices are subject to change on certain days and occasions (Weekends, Holidays, Peak Season). Please confirm the price when booking.
+    </div>
+  </div>
 
   <footer>
     <p>© 2026 Glowroot Wellness | Thekkady, Kerala</p>
+    <span class="disclaimer-text">
+      Disclaimer: All bookings and payments are processed directly by management. This website is for informational purposes only.
+    </span>
+    <p style="margin-top: 15px; font-weight: bold; color: #d4af37;">Powered By MaxEfex</p>
   </footer>
 
 </body>
-
 </html>

@@ -22,63 +22,38 @@
       color: #222;
     }
 
-    h1,
-    h2,
-    h3 {
-      color: #0f5132;
-    }
+    h1, h2, h3 { color: #0f5132; }
+    p { line-height: 1.6; color: #555; }
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+    a { text-decoration: none; transition: 0.3s; }
 
-    p {
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    a {
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    /* ================== PREMIUM TOP BAR (LOGOS ONLY) ================== */
+    /* ================== TOP BAR ================== */
     .top-bar {
-      background: #0f5132; /* Deep Brand Green */
+      background: #0f5132;
       padding: 10px 0;
-      border-bottom: 1px solid #d4af37; /* Thin Gold Line */
+      border-bottom: 1px solid #d4af37;
     }
 
     .social-links {
       display: flex;
-      justify-content: center; /* Perfectly Centered */
+      justify-content: center;
       align-items: center;
-      gap: 30px; /* Nice space between icons */
+      gap: 30px;
     }
 
     .social-links a {
-      color: #ffffff !important; /* White Icons */
-      font-size: 20px; /* Big, readable size */
+      color: #ffffff !important;
+      font-size: 20px;
       transition: 0.3s;
-      text-decoration: none;
     }
+    .social-links a:hover { color: #d4af37 !important; transform: scale(1.1); }
 
-    .social-links a:hover {
-      color: #d4af37 !important; /* Gold on Hover */
-      transform: scale(1.1); /* Slight zoom effect */
-    }
-
-    /* ================== HEADER (SMART STICKY) ================== */
+    /* ================== HEADER ================== */
     .header {
       background: #fff;
       padding: 15px 0;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      
-      /* FIXED: Relative on Mobile (Scrolls away) */
       position: relative; 
-      
       z-index: 1000;
     }
 
@@ -89,7 +64,6 @@
       text-align: center;
     }
 
-    /* LOGO & NAME GROUP */
     .brand-box {
       display: flex;
       align-items: center;
@@ -97,39 +71,11 @@
       margin-bottom: 15px;
     }
 
-    .logo-img {
-      height: 80px;
-      width: auto;
-      margin-right: 15px;
-      background-color: transparent;
-    }
+    .logo-img { height: 80px; width: auto; margin-right: 15px; }
+    .brand-text h2 { margin: 0; font-family: 'Georgia', serif; font-size: 24px; color: #0f5132; line-height: 1.1; }
+    .brand-text p { margin: 2px 0 0 0; font-size: 12px; color: #d4af37; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
 
-    .brand-text {
-      text-align: left;
-    }
-
-    .brand-text h2 {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      font-size: 24px;
-      color: #0f5132;
-      line-height: 1.1;
-    }
-
-    .brand-text p {
-      margin: 2px 0 0 0;
-      font-size: 12px;
-      color: #d4af37;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    /* NAVIGATION (CLEAN ROW) */
-    nav {
-      margin-top: 10px;
-    }
-
+    nav { margin-top: 10px; }
     nav a {
       color: #333;
       margin: 0 15px;
@@ -139,60 +85,26 @@
       padding-bottom: 5px;
       border-bottom: 2px solid transparent;
     }
+    nav a:hover { color: #0f5132; border-bottom: 2px solid #d4af37; }
 
-    nav a:hover {
-      color: #0f5132;
-      border-bottom: 2px solid #d4af37;
-    }
-
-    /* ================== HERO SECTION ================== */
+    /* ================== HERO ================== */
     .hero {
       background-color: #0f5132;
-      background-size: cover;
-      background-position: center;
       color: white !important;
       padding: 80px 20px;
       text-align: center;
       border-bottom: 5px solid #d4af37;
     }
-
-    .hero h1 {
-      color: white;
-      font-family: 'Poppins', sans-serif !important;
-      font-weight: 700;
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      color: #f0f0f0 !important;
-      font-size: 16px;
-      max-width: 600px;
-      margin: 0 auto 30px auto;
-    }
+    .hero h1 { font-family: 'Poppins', sans-serif !important; font-weight: 700; font-size: 32px; margin-bottom: 10px; color: white; }
+    .hero p { color: #f0f0f0 !important; font-size: 16px; max-width: 600px; margin: 0 auto 30px auto; }
 
     /* ================== SECTIONS ================== */
-    .section {
-      padding: 50px 20px;
-    }
-
-    .section.light {
-      background: white;
-    }
-
-    .section-title {
-      text-align: center;
-      font-family: 'Georgia', serif;
-      margin-bottom: 30px;
-      font-size: 28px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
+    .section { padding: 50px 20px; }
+    .section.light { background: white; }
+    .section-title { text-align: center; font-family: 'Georgia', serif; margin-bottom: 30px; font-size: 28px; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    
     .card {
       background: white;
       padding: 25px;
@@ -200,12 +112,7 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
       border-top: 4px solid #198754;
     }
-
-    .card h3 {
-      margin-top: 0;
-      color: #2e7d32;
-      font-size: 18px;
-    }
+    .card h3 { margin-top: 0; color: #2e7d32; font-size: 18px; }
 
     /* ================== BUTTONS ================== */
     .btn {
@@ -217,7 +124,6 @@
       margin: 5px;
       display: inline-block;
     }
-
     .btn-outline {
       border: 2px solid white;
       color: white;
@@ -241,22 +147,21 @@
       border-radius: 12px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     }
+    .contact-item { margin-bottom: 15px; display: flex; align-items: center; font-size: 15px; }
+    .icon { margin-right: 10px; font-size: 18px; }
 
-    .contact-item {
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      font-size: 15px;
+    /* MAP STYLES */
+    .map-box { margin-bottom: 20px; }
+    .map-title {
+      font-size: 14px;
+      font-weight: bold;
+      color: #0f5132;
+      margin-bottom: 5px;
+      display: block;
     }
-
-    .icon {
-      margin-right: 10px;
-      font-size: 18px;
-    }
-
     .map-frame {
       width: 100%;
-      height: 300px;
+      height: 350px;
       border: 0;
       border-radius: 12px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -271,26 +176,11 @@
       font-size: 12px;
     }
 
-    /* MEDIA QUERY FOR LAPTOPS (SIDE-BY-SIDE HEADER) */
     @media (min-width: 768px) {
-      .header-content {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-      .brand-box {
-        margin-bottom: 0;
-      }
-
-      nav {
-        margin-top: 0;
-      }
-
-      /* FIXED: Make it Sticky ONLY on Laptop/PC */
-      .header {
-        position: sticky;
-        top: 0;
-      }
+      .header-content { flex-direction: row; justify-content: space-between; }
+      .brand-box { margin-bottom: 0; }
+      nav { margin-top: 0; }
+      .header { position: sticky; top: 0; }
     }
   </style>
 </head>
@@ -307,7 +197,6 @@
 
   <header class="header">
     <div class="container header-content">
-
       <div class="brand-box">
         <img src="glowrootlogo.png" alt="Logo" class="logo-img">
         <div class="brand-text">
@@ -315,37 +204,31 @@
           <p>Kumily, Thekkady</p>
         </div>
       </div>
-
       <nav>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Gallery</a>
         <a href="#branches">Centers</a> <a href="#contact">Contact</a>
       </nav>
-
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
       <h1>HERBAL AYURVEDIC PANCHAKARMA MASSAGE CENTRE</h1>
-      
       <p style="margin-bottom: 10px;">
         Restore your body and mind with traditional Panchakarma therapies.<br>
         <strong>Experienced Doctor and Certified Therapists</strong>
       </p>
-
       <div style="margin-bottom: 25px; font-size: 15px; color: #f0f0f0; line-height: 1.8;">
         📞 <strong>+91 89431 50767 | +91 89435 90767</strong><br>
         📧 ayurvedicglowroot@gmail.com
       </div>
-
       <div class="hero-buttons">
         <a href="https://wa.me/918943150767" class="btn">WhatsApp</a>
         <a href="tel:+918943150767" class="btn-outline">Call Now</a>
         <a href="mailto:ayurvedicglowroot@gmail.com" class="btn-outline">Send Mail</a>
       </div>
-
     </div>
   </section>
 
@@ -383,18 +266,10 @@
           <p><strong>Herbal Ayurvedic Panchakarma Massage Centre</strong><br>
             Karthika Building, Near Periyar National Park,<br>
             Opp. Gujarati Marwadi Bhojanalaya, Lake Road, Thekkady.</p>
-
-          <p style="color: #0f5132; font-weight: bold;">
-            📞 81388 76075 | 88911 49419
-          </p>
-          <p style="font-size: 13px;">📧 herbalayurvedics09@gmail.com</p>
-
+          <p style="color: #0f5132; font-weight: bold;">📞 81388 76075 | 88911 49419</p>
           <div style="margin-top: 15px;">
             <a href="https://wa.me/918138876075" class="btn" style="padding: 8px 15px; font-size: 13px;">WhatsApp</a>
-            <a href="tel:+918138876075" class="btn-outline"
-              style="color: #333; border-color: #333; padding: 8px 15px; font-size: 13px;">Call</a>
-            <a href="mailto:herbalayurvedics09@gmail.com" class="btn-outline"
-              style="color: #333; border-color: #333; padding: 8px 15px; font-size: 13px;">Mail</a>
+            <a href="tel:+918138876075" class="btn-outline" style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
           </div>
         </div>
 
@@ -403,18 +278,10 @@
           <p><strong>Glowroot Wellness Thekkady</strong><br>
             Ayurvedic Massage and Spa<br>
             Thekkady, Kumily.</p>
-
-          <p style="color: #0f5132; font-weight: bold;">
-            📞 +91 89431 50767 | +91 89435 90767
-          </p>
-          <p style="font-size: 13px;">📧 ayurvedicglowroot@gmail.com</p>
-
+          <p style="color: #0f5132; font-weight: bold;">📞 +91 89431 50767 | +91 89435 90767</p>
           <div style="margin-top: 15px;">
             <a href="https://wa.me/918943150767" class="btn" style="padding: 8px 15px; font-size: 13px;">WhatsApp</a>
-            <a href="tel:+918943150767" class="btn-outline"
-              style="color: #333; border-color: #333; padding: 8px 15px; font-size: 13px;">Call</a>
-            <a href="mailto:ayurvedicglowroot@gmail.com" class="btn-outline"
-              style="color: #333; border-color: #333; padding: 8px 15px; font-size: 13px;">Mail</a>
+            <a href="tel:+918943150767" class="btn-outline" style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
           </div>
         </div>
 
@@ -423,18 +290,20 @@
           <p><strong>Comfortable Family Stay</strong><br>
             Rosapookandom Road,<br>
             Thekkady, Kumily.</p>
-
-          <p style="color: #0f5132; font-weight: bold;">
-            📞 +91 89435 90767 | +91 81388 76075
-          </p>
-          <p style="font-size: 13px;">📧 orchidhomestay46@gmail.com</p>
-
+          <p style="color: #0f5132; font-weight: bold;">📞 +91 89435 90767 | +91 81388 76075</p>
           <div style="margin-top: 15px;">
             <a href="https://wa.me/918943590767" class="btn" style="padding: 8px 15px; font-size: 13px;">WhatsApp</a>
-            <a href="tel:+918943590767" class="btn-outline"
-              style="color: #333; border-color: #333; padding: 8px 15px; font-size: 13px;">Call</a>
-            <a href="mailto:orchidhomestay46@gmail.com" class="btn-outline"
-              style="color: #333; border-color: #333; padding: 8px 15px; font-size: 13px;">Mail</a>
+            <a href="tel:+918943590767" class="btn-outline" style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🏡 Blue Light Guest House</h3>
+          <p><strong>Budget Friendly Stay</strong><br>Kumily, Thekkady.</p>
+          <p style="color: #0f5132; font-weight: bold;">📞 +91 89435 90767</p>
+          <div style="margin-top: 15px;">
+            <a href="https://wa.me/918943590767" class="btn" style="padding: 8px 15px; font-size: 13px;">WhatsApp</a>
+            <a href="tel:+918943590767" class="btn-outline" style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
           </div>
         </div>
 
@@ -442,22 +311,20 @@
     </div>
   </section>
 
-
   <section id="contact" class="section light">
     <div class="container">
       <h2 class="section-title">Visit Us</h2>
-
       <div class="contact-container">
+        
         <div class="contact-info">
           <div class="contact-item">
             <span class="icon">📍</span>
-            <div>
-              <strong>Glowroot Wellness</strong><br>
-              Karthika Building, Opp. Gujarati Marwadi Bhojanalaya,<br>
-              Thekkady, Kumily
-            </div>
+            <div><strong>Glowroot Wellness</strong><br>Karthika Building, Opp. Gujarati Marwadi Bhojanalaya,<br>Thekkady, Kumily</div>
           </div>
-
+          <div class="contact-item">
+            <span class="icon">📍</span>
+            <div><strong>Orchid Homestay</strong><br>Rosapookandom Road,<br>Thekkady, Kumily</div>
+          </div>
           <div class="contact-item">
             <span class="icon">📞</span>
             <div>
@@ -465,12 +332,10 @@
               <a href="tel:+918943590767" style="color:#222;">+91 89435 90767</a>
             </div>
           </div>
-
           <div class="contact-item">
             <span class="icon">📧</span>
             <div>ayurvedicglowroot@gmail.com</div>
           </div>
-
           <div style="margin-top: 15px;">
             <a href="https://wa.me/918943150767" class="btn" style="width:100%; text-align:center;">Chat on WhatsApp</a>
           </div>
@@ -495,5 +360,4 @@
   </footer>
 
 </body>
-
 </html>
