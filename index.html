@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Georgia&display=swap"
     rel="stylesheet">
-    
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <style>
@@ -22,10 +22,27 @@
       color: #222;
     }
 
-    h1, h2, h3 { color: #0f5132; }
-    p { line-height: 1.6; color: #555; }
-    .container { width: 90%; max-width: 1200px; margin: auto; }
-    a { text-decoration: none; transition: 0.3s; }
+    h1,
+    h2,
+    h3 {
+      color: #0f5132;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    a {
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
     /* ================== TOP BAR ================== */
     .top-bar {
@@ -46,14 +63,18 @@
       font-size: 20px;
       transition: 0.3s;
     }
-    .social-links a:hover { color: #d4af37 !important; transform: scale(1.1); }
+
+    .social-links a:hover {
+      color: #d4af37 !important;
+      transform: scale(1.1);
+    }
 
     /* ================== HEADER ================== */
     .header {
       background: #fff;
       padding: 15px 0;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      position: relative; 
+      position: relative;
       z-index: 1000;
     }
 
@@ -71,11 +92,33 @@
       margin-bottom: 15px;
     }
 
-    .logo-img { height: 80px; width: auto; margin-right: 15px; }
-    .brand-text h2 { margin: 0; font-family: 'Georgia', serif; font-size: 24px; color: #0f5132; line-height: 1.1; }
-    .brand-text p { margin: 2px 0 0 0; font-size: 12px; color: #d4af37; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
+    .logo-img {
+      height: 80px;
+      width: auto;
+      margin-right: 15px;
+    }
 
-    nav { margin-top: 10px; }
+    .brand-text h2 {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      font-size: 24px;
+      color: #0f5132;
+      line-height: 1.1;
+    }
+
+    .brand-text p {
+      margin: 2px 0 0 0;
+      font-size: 12px;
+      color: #d4af37;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
     nav a {
       color: #333;
       margin: 0 15px;
@@ -85,7 +128,11 @@
       padding-bottom: 5px;
       border-bottom: 2px solid transparent;
     }
-    nav a:hover { color: #0f5132; border-bottom: 2px solid #d4af37; }
+
+    nav a:hover {
+      color: #0f5132;
+      border-bottom: 2px solid #d4af37;
+    }
 
     /* ================== HERO ================== */
     .hero {
@@ -95,16 +142,44 @@
       text-align: center;
       border-bottom: 5px solid #d4af37;
     }
-    .hero h1 { font-family: 'Poppins', sans-serif !important; font-weight: 700; font-size: 32px; margin-bottom: 10px; color: white; }
-    .hero p { color: #f0f0f0 !important; font-size: 16px; max-width: 600px; margin: 0 auto 30px auto; }
+
+    .hero h1 {
+      font-family: 'Poppins', sans-serif !important;
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .hero p {
+      color: #f0f0f0 !important;
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+    }
 
     /* ================== SECTIONS ================== */
-    .section { padding: 50px 20px; }
-    .section.light { background: white; }
-    .section-title { text-align: center; font-family: 'Georgia', serif; margin-bottom: 30px; font-size: 28px; }
-    
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    
+    .section {
+      padding: 50px 20px;
+    }
+
+    .section.light {
+      background: white;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Georgia', serif;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
     .card {
       background: white;
       padding: 25px;
@@ -112,7 +187,12 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
       border-top: 4px solid #198754;
     }
-    .card h3 { margin-top: 0; color: #2e7d32; font-size: 18px; }
+
+    .card h3 {
+      margin-top: 0;
+      color: #2e7d32;
+      font-size: 18px;
+    }
 
     /* ================== BUTTONS ================== */
     .btn {
@@ -124,6 +204,7 @@
       margin: 5px;
       display: inline-block;
     }
+
     .btn-outline {
       border: 2px solid white;
       color: white;
@@ -147,8 +228,18 @@
       border-radius: 12px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     }
-    .contact-item { margin-bottom: 15px; display: flex; align-items: center; font-size: 15px; }
-    .icon { margin-right: 10px; font-size: 18px; }
+
+    .contact-item {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    .icon {
+      margin-right: 10px;
+      font-size: 18px;
+    }
 
     footer {
       background: #222;
@@ -160,10 +251,23 @@
     }
 
     @media (min-width: 768px) {
-      .header-content { flex-direction: row; justify-content: space-between; }
-      .brand-box { margin-bottom: 0; }
-      nav { margin-top: 0; }
-      .header { position: sticky; top: 0; }
+      .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .brand-box {
+        margin-bottom: 0;
+      }
+
+      nav {
+        margin-top: 0;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+      }
     }
   </style>
 </head>
@@ -248,11 +352,11 @@
           <h3>🌿 Herbal Ayurvedic Centre</h3>
           <p><strong>Herbal Ayurvedic Panchakarma Massage Centre</strong><br>
             Karthika Building, Near Periyar National Park,<br>
-            Opp. Gujarati Marwadi Bhojanalaya, Lake Road, Thekkady.</p>
           <p style="color: #0f5132; font-weight: bold;">📞 81388 76075 | 88911 49419</p>
           <div style="margin-top: 15px;">
             <a href="https://wa.me/918138876075" class="btn" style="padding: 8px 15px; font-size: 13px;">WhatsApp</a>
-            <a href="tel:+918138876075" class="btn-outline" style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
+            <a href="tel:+918138876075" class="btn-outline"
+              style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
           </div>
         </div>
 
@@ -261,10 +365,11 @@
           <p><strong>Glowroot Wellness Thekkady</strong><br>
             Ayurvedic Massage and Spa<br>
             Thekkady, Kumily.</p>
-          <p style="color: #0f5132; font-weight: bold;">📞 +91 89431 50767 | +91 89435 90767</p>
+          <p style="color: #0f5132; font-weight: bold;">📞 89431 50767 | 89435 90767</p>
           <div style="margin-top: 15px;">
             <a href="https://wa.me/918943150767" class="btn" style="padding: 8px 15px; font-size: 13px;">WhatsApp</a>
-            <a href="tel:+918943150767" class="btn-outline" style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
+            <a href="tel:+918943150767" class="btn-outline"
+              style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
           </div>
         </div>
 
@@ -273,20 +378,22 @@
           <p><strong>Comfortable Family Stay</strong><br>
             Rosapookandom Road,<br>
             Thekkady, Kumily.</p>
-          <p style="color: #0f5132; font-weight: bold;">📞 +91 89435 90767 | +91 81388 76075</p>
+          <p style="color: #0f5132; font-weight: bold;">📞 89435 90767 | 81388 76075</p>
           <div style="margin-top: 15px;">
             <a href="https://wa.me/918943590767" class="btn" style="padding: 8px 15px; font-size: 13px;">WhatsApp</a>
-            <a href="tel:+918943590767" class="btn-outline" style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
+            <a href="tel:+918943590767" class="btn-outline"
+              style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
           </div>
         </div>
 
         <div class="card">
           <h3>🏡 Blue Light Guest House</h3>
           <p><strong>Budget Friendly Stay</strong><br>Kumily, Thekkady.</p>
-          <p style="color: #0f5132; font-weight: bold;">📞 +91 89435 90767</p>
+          <p style="color: #0f5132; font-weight: bold;">📞 89431 50767 | 89435 90767</p>
           <div style="margin-top: 15px;">
             <a href="https://wa.me/918943590767" class="btn" style="padding: 8px 15px; font-size: 13px;">WhatsApp</a>
-            <a href="tel:+918943590767" class="btn-outline" style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
+            <a href="tel:+918943590767" class="btn-outline"
+              style="color:#333; border-color:#333; padding:8px 15px; font-size:13px;">Call</a>
           </div>
         </div>
 
@@ -294,15 +401,24 @@
     </div>
   </section>
 
+  <div style="margin-top: 25px; text-align: center;">
+    <a href="https://search.google.com/local/writereview?placeid=ChIJdVKWLQBVBjsRUoJTFvrmRik" target="_blank"
+      style="display: inline-block; background: #2c5430; color: #d4af37; padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 15px; border: 2px solid #d4af37; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s;">
+      <span style="font-size: 18px;">★★★★★</span><br>
+      LEAVE A 5-STAR REVIEW
+    </a>
+    <p style="font-size: 11px; color: #666; margin-top: 8px;">Your feedback helps us grow!</p>
+  </div>
   <section id="contact" class="section light">
     <div class="container">
       <h2 class="section-title">Visit Us</h2>
       <div class="contact-container">
-        
+
         <div class="contact-info">
           <div class="contact-item">
             <span class="icon">📍</span>
-            <div><strong>Glowroot Wellness</strong><br>Karthika Building, Opp. Gujarati Marwadi Bhojanalaya,<br>Thekkady, Kumily</div>
+            <div><strong>Glowroot Wellness</strong><br>Karthika Building, Opp. Gujarati Marwadi
+              Bhojanalaya,<br>Thekkady, Kumily</div>
           </div>
           <div class="contact-item">
             <span class="icon">📍</span>
@@ -319,30 +435,42 @@
             <span class="icon">📧</span>
             <div>ayurvedicglowroot@gmail.com</div>
           </div>
+          <div class="contact-item">
+            <span class="icon">📧</span>
+            <div>orchidhomestay46@gmail.com</div>
+          </div>
           <div style="margin-top: 15px;">
             <a href="https://wa.me/918943150767" class="btn" style="width:100%; text-align:center;">Chat on WhatsApp</a>
           </div>
         </div>
 
-        <div>
-          <div style="width: 100%; text-align: center; padding: 20px; background: #f9f9f9; border-radius: 10px; margin-top: 20px;">
-            <h4 style="color: #2c5430; margin-bottom: 20px;">Find Our Locations</h4>
+        <div
+          style="width: 100%; text-align: center; padding: 20px; background: #f9f9f9; border-radius: 10px; margin-top: 20px;">
+          <h4 style="color: #2c5430; margin-bottom: 20px;">Find Our Locations</h4>
 
-            <a href="https://maps.app.goo.gl/qffh7PepszVsjYHj8" target="_blank"
-              style="display: block; background-color: #d4af37; color: white; padding: 15px; margin-bottom: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 14px; line-height: 1.4; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-              📍 Glow Root Wellness<br>
-              <span style="font-size: 11px; font-weight: normal; color: #fff;">Ayurvedic Clinic With Doctor and Certified Therapist</span>
-            </a>
+          <a href="https://maps.app.goo.gl/rj5q4agaGQ7Rr1ZG7" target="_blank"
+            style="display: block; background-color: #d4af37; color: white; padding: 15px; margin-bottom: 12px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            📍 HERBAL AYURVEDIC PANCHAKARMA MASSAGE CENTER AND SPA<br>
+            <span style="font-size: 11px; font-weight: normal; color: #fff;">Thekkady, Kumily, Kerala 685509</span>
+          </a>
 
-            <a href="https://maps.app.goo.gl/WzXqUBq29DaBpF3n9" target="_blank"
-              style="display: block; background-color: #d4af37; color: white; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-              📍 Orchid Home Stay
-            </a>
+          <a href="https://maps.app.goo.gl/qffh7PepszVsjYHj8" target="_blank"
+            style="display: block; background-color: #d4af37; color: white; padding: 15px; margin-bottom: 12px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 14px; line-height: 1.4; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            📍 Glow Root Wellness<br>
+            <span style="font-size: 11px; font-weight: normal; color: #fff;">Ayurvedic Clinic With Doctor and Certified
+              Therapist</span>
+          </a>
 
-          </div>
+          <a href="https://maps.app.goo.gl/WzXqUBq29DaBpF3n9" target="_blank"
+            style="display: block; background-color: #d4af37; color: white; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            📍 Orchid Home Stay<br>
+            <span style="font-size: 11px; font-weight: normal; color: #fff;">Rosapookandom Road Thekkady, Kumily</span>
+          </a>
+          <div style="clear: both;"></div>
         </div>
-
       </div>
+
+    </div>
     </div>
   </section>
 
@@ -351,4 +479,5 @@
   </footer>
 
 </body>
+
 </html>
