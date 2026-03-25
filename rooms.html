@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Room details, rates, amenities, and photo highlights for Orchid Homestay rooms in Kumily, Thekkady.">
+  <title>Rooms | Orchid Homestay, Kumily</title>
+  <style>
+    :root {
+      --green-deep: #2e5d3a;
+      --green-soft: #e6f0e4;
+      --green-pale: #f5f9f1;
+      --cream: #fffaf1;
+      --cream-strong: #f3ead8;
+      --text: #2d332d;
+      --muted: #6b7368;
+      --white: #ffffff;
+      --line: #dce6d8;
+      --shadow: 0 18px 55px rgba(41, 54, 40, 0.10);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(95, 143, 98, 0.12), transparent 26%),
+        linear-gradient(180deg, #fdfcf8 0%, #f6f8f1 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+    .topbar { background: var(--green-deep); color: rgba(255,255,255,.92); font-size: .92rem; }
+    .topbar .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; padding: 10px 0; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 30; background: rgba(255, 250, 241, 0.96);
+      backdrop-filter: blur(12px); border-bottom: 1px solid rgba(220, 230, 216, 0.95);
+    }
+
+    .header-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 0; }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand img { width: 68px; height: 68px; object-fit: contain; border-radius: 20px; background: var(--white); box-shadow: 0 10px 24px rgba(46, 93, 58, 0.12); padding: 4px; }
+    .brand h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.12rem; line-height: 1.18; color: var(--green-deep); }
+    .brand p { margin: 5px 0 0; font-size: .92rem; color: var(--muted); }
+    .nav { display: flex; flex-wrap: wrap; gap: 12px 18px; font-size: .95rem; font-weight: 700; }
+    .nav a.active { color: var(--green-deep); }
+
+    .hero { padding: 56px 0 38px; }
+    .hero-box, .card, .gallery-item, .contact-panel {
+      border-radius: 28px; border: 1px solid var(--line); box-shadow: var(--shadow);
+    }
+    .hero-box {
+      padding: 40px;
+      background: linear-gradient(140deg, rgba(245,249,241,.97), rgba(255,255,255,.98)), var(--white);
+    }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 999px;
+      background: var(--green-soft); color: var(--green-deep); font-size: .86rem; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+
+    h2, h3 { font-family: Georgia, "Times New Roman", serif; color: var(--green-deep); }
+    .hero h2 { margin: 18px 0 14px; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.06; }
+    p { margin: 0 0 14px; line-height: 1.8; color: var(--muted); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .btn, .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 50px;
+      padding: 0 22px; border-radius: 999px; font-weight: 700;
+    }
+    .btn { background: var(--green-deep); color: var(--white); }
+    .btn-secondary { background: var(--white); color: var(--text); border: 1px solid var(--line); }
+
+    .section { padding: 34px 0; }
+    .section-title { margin: 0 0 12px; text-align: center; font-size: clamp(1.8rem,2.6vw,2.7rem); }
+    .section-intro { max-width: 820px; margin: 0 auto 28px; text-align: center; line-height: 1.8; color: var(--muted); }
+    .grid { display: grid; gap: 22px; }
+    .three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card { background: rgba(255,255,255,.95); padding: 26px; }
+    .card h3 { margin: 0 0 12px; font-size: 1.25rem; color: var(--text); }
+    .tag {
+      display: inline-block; margin-bottom: 12px; padding: 7px 12px; border-radius: 999px;
+      background: var(--green-soft); color: var(--green-deep); font-size: .84rem; font-weight: 800;
+    }
+    .price { font-size: 1.8rem; font-weight: 800; color: var(--green-deep); margin: 12px 0 4px; }
+    .checklist { list-style: none; padding: 0; margin: 16px 0 0; }
+    .checklist li { padding: 10px 0; border-top: 1px solid var(--line); line-height: 1.7; }
+    .checklist li:first-child { border-top: 0; padding-top: 0; }
+
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .gallery-item { overflow: hidden; background: rgba(255,255,255,.95); }
+    .gallery-item img { width: 100%; height: 255px; object-fit: cover; background: #eef3eb; }
+    .caption { padding: 14px 16px 18px; }
+    .caption strong { display: block; margin-bottom: 6px; color: var(--text); }
+    .caption span { color: var(--muted); line-height: 1.65; }
+
+    .notice {
+      margin-top: 18px; padding: 16px 18px; border-radius: 16px; background: var(--cream);
+      border: 1px solid var(--cream-strong); color: var(--text); line-height: 1.75;
+    }
+
+    .notice strong { color: var(--green-deep); }
+
+    .contact-panel {
+      background: linear-gradient(135deg, #29492f, #3e6844);
+      color: rgba(255,255,255,.94); padding: 34px;
+    }
+    .contact-panel h2, .contact-panel p, .contact-panel a { color: inherit; }
+
+    .contact-panel .btn {
+      background: #3a7247;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-panel .btn-secondary {
+      background: #f5ecd9;
+      color: #1f2a1f;
+      border: 1px solid #e6d8ba;
+      box-shadow: 0 8px 18px rgba(20, 24, 20, 0.12);
+    }
+
+    footer { padding: 28px 0 40px; text-align: center; color: var(--muted); font-size: .92rem; }
+
+    @media (max-width: 980px) {
+      .three-col, .gallery-grid { grid-template-columns: 1fr; }
+      .header-row { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 680px) {
+      .hero-box, .card, .contact-panel { padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Orchid Homestay room details</span>
+      <span>Direct rates and offers</span>
+      <span>Suitable for couples, families, and tourists</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <img src="glowrootlogo.png" alt="Orchid Homestay logo" width="68" height="68">
+        <div>
+          <h1>Orchid Homestay Rooms</h1>
+          <p>Stay support connected to Herbal Ayurvedic Panchakarma Massage Centre</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Treatments</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="active" href="rooms.html">Rooms</a>
+        <a href="homestays.html">Homestays</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <span class="eyebrow">Rooms Page</span>
+          <h2>Comfortable homestay rooms in Kumily with direct booking support and a calm local atmosphere.</h2>
+          <p>This page gives proper space to the rooms side of the business without moving attention away from the main
+            Ayurvedic centre. Orchid Homestay is ideal for tourists who want a peaceful place to stay close to
+            treatment support, Periyar travel, and local Kumily movement.</p>
+          <p>The rooms suit couples, families, solo travellers, and foreign visitors who prefer a more personal and
+            welcoming stay than a standard hotel.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://wa.me/918943590767">Ask For Room Availability</a>
+            <a class="btn-secondary" href="tel:+918943590767">Call Orchid Homestay</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Room Categories and Rates</h2>
+        <p class="section-intro">These rates are designed as direct-reference pricing so guests can understand room
+          levels clearly and enquire faster.</p>
+        <div class="grid three-col">
+          <article class="card">
+            <span class="tag">Standard Room</span>
+            <h3>Comfort Room for 2 Guests</h3>
+            <div class="price">From Rs. 1,800</div>
+            <ul class="checklist">
+              <li>Best for couples and solo travellers</li>
+              <li>Clean private room with calm atmosphere</li>
+              <li>Suitable for short wellness or sightseeing stays</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag">Family Room</span>
+            <h3>Family-Friendly Stay Option</h3>
+            <div class="price">From Rs. 2,800</div>
+            <ul class="checklist">
+              <li>Useful for parents, children, and shared travel</li>
+              <li>More practical for holiday groups</li>
+              <li>Longer stay pricing can be discussed directly</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag">Direct Offer</span>
+            <h3>Stay With Wellness Planning</h3>
+            <div class="price">Best Value</div>
+            <ul class="checklist">
+              <li>Ask about room plus treatment coordination</li>
+              <li>Special support for multiple nights</li>
+              <li>Pick-up or drop discussion on request</li>
+            </ul>
+          </article>
+        </div>
+        <div class="notice"><strong>Room Rate Disclaimer:</strong> Room rates are starting prices and may change based
+          on season, number of guests, holiday dates, and any requested extras such as transport or special stay
+          support.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Room Features Guests Ask About</h2>
+        <p class="section-intro">We added this section because room pages feel more complete when they explain comfort,
+          stay mood, and practical travel suitability instead of showing only price.</p>
+        <div class="grid three-col">
+          <article class="card">
+            <span class="tag">Atmosphere</span>
+            <h3>Simple, calm, and homely</h3>
+            <p>Orchid Homestay gives guests a local stay feeling with a quieter mood, especially useful after long road
+              travel, sightseeing, or Ayurvedic treatment.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Location</span>
+            <h3>Useful base for Kumily travel</h3>
+            <p>Guests can move easily toward Thekkady, Periyar tourism, spice visits, and nearby local routes while
+              keeping a more comfortable rest point for the night.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Added Support</span>
+            <h3>Travel and local guidance</h3>
+            <p>We help with check-in coordination, route support, and direct guidance for guests who want a smoother
+              arrival, especially first-time or foreign travellers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Room Photo Highlights</h2>
+        <p class="section-intro">A dedicated rooms page should also show the visual character of the accommodation, so
+          we have highlighted key Orchid room and property photos here.</p>
+        <div class="gallery-grid">
+          <article class="gallery-item"><img loading="lazy" src="images/orchid-2.jpeg" alt="Orchid bedroom"><div class="caption"><strong>Bedroom View</strong><span>Clean room setup for restful overnight stay.</span></div></article>
+          <article class="gallery-item"><img loading="lazy" src="images/orchid-7.jpeg" alt="Orchid room layout"><div class="caption"><strong>Room Layout</strong><span>Useful visual for couples and solo guests.</span></div></article>
+          <article class="gallery-item"><img loading="lazy" src="images/orchid-10.jpeg" alt="Private room"><div class="caption"><strong>Private Room</strong><span>Practical and simple room presentation.</span></div></article>
+          <article class="gallery-item"><img loading="lazy" src="images/orchid-11.jpeg" alt="Room interior"><div class="caption"><strong>Interior Mood</strong><span>Quiet, local, and comfortable stay atmosphere.</span></div></article>
+          <article class="gallery-item"><img loading="lazy" src="images/orchid-3.jpeg" alt="Living area"><div class="caption"><strong>Living Area</strong><span>A more personal setting than standard hotel corridors.</span></div></article>
+          <article class="gallery-item"><img loading="lazy" src="images/orchid-1.jpeg" alt="Exterior view"><div class="caption"><strong>Exterior View</strong><span>A first impression of the property from outside.</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-panel">
+          <h2 class="section-title" style="text-align:left; color:#ffffff; margin-bottom:12px;">Room Booking Contact</h2>
+          <p>Direct booking is the best way to confirm room photos, current rate, guest count suitability, and any
+            wellness plus stay coordination. Guests can also ask about pick-up and drop support at the same time.</p>
+          <p><strong>Phone:</strong> <a href="tel:+918943590767">+91 89435 90767</a> | <a href="tel:+918138876075">+91 81388 76075</a></p>
+          <p><strong>Email:</strong> <a href="mailto:orchidhomestay46@gmail.com">orchidhomestay46@gmail.com</a></p>
+          <div class="cta-row">
+            <a class="btn" href="https://wa.me/918943590767">WhatsApp For Rooms</a>
+            <a class="btn-secondary" href="homestays.html">View Homestays</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Powered By MaxEfex 2026</div>
+  </footer>
+</body>
+
+</html>

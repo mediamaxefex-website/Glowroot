@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Homestay and guest house options in Kumily including Orchid Homestay and Blue Light Guest House with rates, travel support, and local guidance.">
+  <title>Homestays | Orchid Homestay & Blue Light Guest House</title>
+  <style>
+    :root {
+      --green-deep: #2e5d3a;
+      --green-soft: #e6f0e4;
+      --green-pale: #f5f9f1;
+      --cream: #fffaf1;
+      --cream-strong: #f3ead8;
+      --text: #2d332d;
+      --muted: #6b7368;
+      --white: #ffffff;
+      --line: #dce6d8;
+      --shadow: 0 18px 55px rgba(41, 54, 40, 0.10);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(95, 143, 98, 0.12), transparent 26%),
+        linear-gradient(180deg, #fdfcf8 0%, #f6f8f1 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+    .topbar { background: var(--green-deep); color: rgba(255,255,255,.92); font-size: .92rem; }
+    .topbar .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; padding: 10px 0; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 30; background: rgba(255, 250, 241, 0.96);
+      backdrop-filter: blur(12px); border-bottom: 1px solid rgba(220, 230, 216, 0.95);
+    }
+
+    .header-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 0; }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand img { width: 68px; height: 68px; object-fit: contain; border-radius: 20px; background: var(--white); box-shadow: 0 10px 24px rgba(46, 93, 58, 0.12); padding: 4px; }
+    .brand h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.12rem; line-height: 1.18; color: var(--green-deep); }
+    .brand p { margin: 5px 0 0; font-size: .92rem; color: var(--muted); }
+    .nav { display: flex; flex-wrap: wrap; gap: 12px 18px; font-size: .95rem; font-weight: 700; }
+    .nav a.active { color: var(--green-deep); }
+
+    .hero { padding: 56px 0 38px; }
+    .hero-box, .card, .contact-panel {
+      border-radius: 28px; border: 1px solid var(--line); box-shadow: var(--shadow);
+    }
+    .hero-box {
+      padding: 40px;
+      background: linear-gradient(140deg, rgba(245,249,241,.97), rgba(255,255,255,.98)), var(--white);
+    }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 999px;
+      background: var(--green-soft); color: var(--green-deep); font-size: .86rem; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+
+    h2, h3 { font-family: Georgia, "Times New Roman", serif; color: var(--green-deep); }
+    .hero h2 { margin: 18px 0 14px; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.06; }
+    p { margin: 0 0 14px; line-height: 1.8; color: var(--muted); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .btn, .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 50px;
+      padding: 0 22px; border-radius: 999px; font-weight: 700;
+    }
+    .btn { background: var(--green-deep); color: var(--white); }
+    .btn-secondary { background: var(--white); color: var(--text); border: 1px solid var(--line); }
+
+    .section { padding: 34px 0; }
+    .section-title { margin: 0 0 12px; text-align: center; font-size: clamp(1.8rem,2.6vw,2.7rem); }
+    .section-intro { max-width: 820px; margin: 0 auto 28px; text-align: center; line-height: 1.8; color: var(--muted); }
+    .grid { display: grid; gap: 22px; }
+    .two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card { background: rgba(255,255,255,.95); padding: 26px; }
+    .card h3 { margin: 0 0 12px; font-size: 1.25rem; color: var(--text); }
+    .tag {
+      display: inline-block; margin-bottom: 12px; padding: 7px 12px; border-radius: 999px;
+      background: var(--green-soft); color: var(--green-deep); font-size: .84rem; font-weight: 800;
+    }
+    .price { font-size: 1.8rem; font-weight: 800; color: var(--green-deep); margin: 12px 0 4px; }
+    .checklist { list-style: none; padding: 0; margin: 16px 0 0; }
+    .checklist li { padding: 10px 0; border-top: 1px solid var(--line); line-height: 1.7; }
+    .checklist li:first-child { border-top: 0; padding-top: 0; }
+
+    .notice {
+      margin-top: 18px; padding: 16px 18px; border-radius: 16px; background: var(--cream);
+      border: 1px solid var(--cream-strong); color: var(--text); line-height: 1.75;
+    }
+
+    .notice strong { color: var(--green-deep); }
+
+    .contact-panel {
+      background: linear-gradient(135deg, #29492f, #3e6844);
+      color: rgba(255,255,255,.94); padding: 34px;
+    }
+    .contact-panel h2, .contact-panel p, .contact-panel a { color: inherit; }
+
+    .contact-panel .btn {
+      background: #3a7247;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-panel .btn-secondary {
+      background: #f5ecd9;
+      color: #1f2a1f;
+      border: 1px solid #e6d8ba;
+      box-shadow: 0 8px 18px rgba(20, 24, 20, 0.12);
+    }
+
+    footer { padding: 28px 0 40px; text-align: center; color: var(--muted); font-size: .92rem; }
+
+    @media (max-width: 980px) {
+      .two-col { grid-template-columns: 1fr; }
+      .header-row { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 680px) {
+      .hero-box, .card, .contact-panel { padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Homestay and guest house options in Kumily</span>
+      <span>Direct rates, transport help, and local support</span>
+      <span>Connected to the main massage centre</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <img src="glowrootlogo.png" alt="Homestay logo" width="68" height="68">
+        <div>
+          <h1>Homestays and Guest House</h1>
+          <p>Orchid Homestay and Blue Light Guest House in Kumily</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Treatments</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="rooms.html">Rooms</a>
+        <a class="active" href="homestays.html">Homestays</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <span class="eyebrow">Stay Options</span>
+          <h2>Two accommodation choices for travellers who want direct local care in Kumily.</h2>
+          <p>This page gives a complete homestay overview so guests can compare Orchid Homestay and Blue Light Guest
+            House more easily. The stay section supports the main business by helping treatment guests find a practical
+            place to rest before or after massage and wellness sessions.</p>
+          <p>Some visitors want a more premium homestay mood, while others mainly need a clean and budget-friendly
+            stay. That is why both options are presented clearly here.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://wa.me/918943590767">WhatsApp For Stay</a>
+            <a class="btn-secondary" href="tel:+918943590767">Call Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Compare the Stay Options</h2>
+        <p class="section-intro">A clear comparison helps tourists, families, and first-time foreign guests choose the
+          right place faster without confusion.</p>
+        <div class="grid two-col">
+          <article class="card">
+            <span class="tag">Primary Stay</span>
+            <h3>Orchid Homestay</h3>
+            <div class="price">From Rs. 1,800</div>
+            <p>Located on Rosapookandom Road, Thekkady, Kumily, Orchid Homestay is best for guests who want a calmer,
+              more welcoming local stay with better connection to wellness support and a relaxed tourist atmosphere.</p>
+            <ul class="checklist">
+              <li>Suitable for couples, families, and foreign travellers</li>
+              <li>Good option for treatment plus stay coordination</li>
+              <li>Phone: +91 89435 90767 | +91 81388 76075</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag">Budget Stay</span>
+            <h3>Blue Light Guest House</h3>
+            <div class="price">Budget Friendly</div>
+            <p>Blue Light Guest House offers a simpler stay style for guests who want more affordable accommodation
+              while remaining close to Kumily access, local travel support, and the wider Glowroot network.</p>
+            <ul class="checklist">
+              <li>Suitable for budget-conscious travellers</li>
+              <li>Simple stay with local support advantage</li>
+              <li>Phone: +91 89431 50767 | +91 89435 90767</li>
+            </ul>
+          </article>
+        </div>
+        <div class="notice"><strong>Stay Rate Disclaimer:</strong> Final stay rates depend on season, guest number,
+          room type, holidays, and any requested transport or add-on support. Direct enquiry gives the best room
+          guidance and final confirmed price.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Why Guests Choose Our Stay Options</h2>
+        <p class="section-intro">A strong stay page needs more than room rates. Guests also want to know why the stay
+          works well for their overall travel plan in Kumily and Thekkady.</p>
+        <div class="grid two-col">
+          <article class="card">
+            <span class="tag">For Holiday Visitors</span>
+            <h3>Better for slower and more personal travel</h3>
+            <p>Many travellers prefer a homestay because it feels less rushed than a commercial hotel. Our stay options
+              are helpful for guests who want local contact, route guidance, and a quieter evening after sightseeing.</p>
+          </article>
+          <article class="card">
+            <span class="tag">For Wellness Guests</span>
+            <h3>Useful with massage and Panchakarma planning</h3>
+            <p>Guests visiting Herbal Ayurvedic Panchakarma Massage Centre can use these stay options to keep treatment,
+              rest, and local travel simpler under one connected booking conversation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Travel Support for Stay Guests</h2>
+        <p class="section-intro">This section keeps the important travel details visible for tourists who are planning
+          Kumily for the first time.</p>
+        <div class="grid two-col">
+          <article class="card">
+            <span class="tag">Pick-Up and Drop</span>
+            <h3>Arrival made easier</h3>
+            <ul class="checklist">
+              <li>Pick-up support can be discussed from Kumily bus stand or nearby arrival point</li>
+              <li>Late arrival guidance available through direct contact</li>
+              <li>Drop coordination may be arranged for onward travel</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag">Tourist Convenience</span>
+            <h3>Good base for local attractions</h3>
+            <ul class="checklist">
+              <li>Useful for Periyar Tiger Reserve visits</li>
+              <li>Close to spice plantations and local markets</li>
+              <li>Comfortable for guests mixing sightseeing and wellness</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-panel">
+          <h2 class="section-title" style="text-align:left; color:#ffffff; margin-bottom:12px;">Stay Enquiry Contact</h2>
+          <p>Contact us directly for live room status, current offers, family booking support, and guidance on whether
+            Orchid Homestay or Blue Light Guest House is the better fit for your stay.</p>
+          <p><strong>Phone:</strong> <a href="tel:+918943590767">+91 89435 90767</a> | <a href="tel:+918943150767">+91 89431 50767</a></p>
+          <p><strong>Email:</strong> <a href="mailto:orchidhomestay46@gmail.com">orchidhomestay46@gmail.com</a></p>
+          <div class="cta-row">
+            <a class="btn" href="https://wa.me/918943590767">WhatsApp Stay Booking</a>
+            <a class="btn-secondary" href="services.html">View Treatments</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Powered By MaxEfex 2026</div>
+  </footer>
+</body>
+
+</html>

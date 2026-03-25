@@ -2,395 +2,411 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery | Glowroot Wellness & Homestays</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Georgia&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Gallery of Herbal Ayurvedic Panchakarma Massage Centre, Glowroot Wellness, Orchid Homestay, and Blue Light Guest House in Kumily.">
+  <title>Gallery | Herbal Ayurvedic Panchakarma Massage Centre</title>
   <style>
-    /* Reuse Global Styles from Index */
+    :root {
+      --green-deep: #2e5d3a;
+      --green-main: #5f8f62;
+      --green-soft: #e6f0e4;
+      --green-pale: #f5f9f1;
+      --cream: #fffaf1;
+      --text: #2d332d;
+      --muted: #6b7368;
+      --white: #ffffff;
+      --line: #dce6d8;
+      --shadow: 0 18px 55px rgba(41, 54, 40, 0.10);
+      --radius: 24px;
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f8f9fa;
-      color: #222;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(95, 143, 98, 0.12), transparent 26%),
+        linear-gradient(180deg, #fdfcf8 0%, #f6f8f1 100%);
     }
 
-    h1,
-    h2,
-    h3 {
-      color: #0f5132;
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+    .topbar {
+      background: var(--green-deep);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.92rem;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    a {
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    /* Top Bar */
-    .top-bar {
-      background: #0f5132;
-      padding: 10px 0;
-      border-bottom: 1px solid #d4af37;
-    }
-
-    .social-links {
+    .topbar .container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 10px 22px;
+      padding: 10px 0;
     }
 
-    .social-links a {
-      color: #ffffff !important;
-      font-size: 20px;
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255, 250, 241, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(220, 230, 216, 0.95);
     }
 
-    /* Header */
-    .header {
-      background: #fff;
-      padding: 15px 0;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      position: relative;
-    }
-
-    .header-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .brand-box {
+    .header-row {
       display: flex;
       align-items: center;
-      margin-bottom: 15px;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 0;
     }
 
-    .logo-img {
-      height: 60px;
-      width: auto;
-      margin-right: 15px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
-    .brand-text h2 {
+    .brand img {
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+      border-radius: 20px;
+      background: var(--white);
+      box-shadow: 0 10px 24px rgba(46, 93, 58, 0.12);
+      padding: 4px;
+    }
+
+    .brand h1 {
       margin: 0;
-      font-family: 'Georgia', serif;
-      font-size: 20px;
-      color: #0f5132;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12rem;
+      line-height: 1.18;
+      color: var(--green-deep);
     }
 
-    nav {
-      margin-top: 10px;
+    .brand p { margin: 5px 0 0; font-size: 0.92rem; color: var(--muted); }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      font-size: 0.95rem;
+      font-weight: 700;
     }
 
-    nav a {
-      color: #333;
-      margin: 0 15px;
-      font-weight: 600;
-      font-size: 14px;
+    .nav a.active { color: var(--green-deep); }
+
+    .hero {
+      padding: 56px 0 38px;
+    }
+
+    .hero-box {
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 40px;
+      background:
+        linear-gradient(140deg, rgba(245, 249, 241, 0.97), rgba(255, 255, 255, 0.98)),
+        var(--white);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green-deep);
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      border-bottom: 2px solid transparent;
     }
 
-    nav a:hover {
-      color: #0f5132;
-      border-bottom: 2px solid #d4af37;
+    h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--green-deep);
     }
 
-    /* Gallery Styles */
-    .page-title {
-      background: #0f5132;
-      color: white;
+    .hero h2 {
+      margin: 18px 0 14px;
+      font-size: clamp(2rem, 4vw, 3.8rem);
+      line-height: 1.06;
+    }
+
+    p {
+      margin: 0 0 14px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .btn { background: var(--green-deep); color: var(--white); }
+    .btn-secondary { background: var(--white); color: var(--text); border: 1px solid var(--line); }
+
+    .section { padding: 34px 0; }
+    .section-title {
+      margin: 0 0 12px;
       text-align: center;
-      padding: 60px 20px;
-      border-bottom: 4px solid #d4af37;
+      font-size: clamp(1.8rem, 2.6vw, 2.7rem);
     }
 
-    .page-title h1 {
-      color: white;
-      margin: 0;
-    }
-
-    .gallery-section {
-      padding: 50px 0;
-    }
-
-    .gallery-heading {
+    .section-intro {
+      max-width: 820px;
+      margin: 0 auto 28px;
       text-align: center;
-      font-family: 'Georgia', serif;
-      font-size: 28px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .group {
       margin-bottom: 30px;
-      border-bottom: 2px solid #ddd;
-      display: inline-block;
-      padding-bottom: 10px;
     }
 
-    .sub-heading {
-      font-size: 22px;
-      color: #d4af37;
-      margin: 40px 0 20px;
-      font-weight: bold;
-      padding-left: 10px;
-      border-left: 4px solid #0f5132;
+    .group-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: end;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .group-head h3 {
+      margin: 0;
+      font-size: 1.55rem;
+      color: var(--black);
+    }
+
+    .group-head p {
+      max-width: 680px;
+      margin: 0;
     }
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
     }
 
     .gallery-item {
-      border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: 0.3s;
-      background: white;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.02);
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
     }
 
     .gallery-item img {
       width: 100%;
-      height: 250px;
+      height: 255px;
       object-fit: cover;
-      display: block;
+      background: #eef3eb;
     }
 
     .caption {
-      padding: 10px;
-      background: white;
-      text-align: center;
-      font-weight: bold;
-      color: #555;
-      font-size: 14px;
+      padding: 14px 16px 18px;
+    }
+
+    .caption strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .caption span {
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.65;
     }
 
     footer {
-      background: #222;
-      color: #aaa;
+      padding: 28px 0 40px;
       text-align: center;
-      padding: 30px 20px;
-      margin-top: 40px;
-      font-size: 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
-    @media (min-width: 768px) {
-      .header-content {
-        flex-direction: row;
-        justify-content: space-between;
+    @media (max-width: 980px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
       }
 
-      .brand-box {
-        margin-bottom: 0;
+      .header-row {
+        flex-direction: column;
+        align-items: flex-start;
       }
+    }
 
-      nav {
-        margin-top: 0;
+    @media (max-width: 680px) {
+      .hero-box {
+        padding: 22px;
       }
     }
   </style>
 </head>
 
 <body>
-
-  <div class="top-bar">
-    <div class="container social-links">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
+  <div class="topbar">
+    <div class="container">
+      <span>Main centre, treatment spaces, and homestay photos</span>
+      <span>Fast-loading image gallery</span>
+      <span>Kumily, Thekkady</span>
     </div>
   </div>
 
-  <header class="header">
-    <div class="container header-content">
-      <div class="brand-box">
-        <img src="glowrootlogo.png" alt="Logo" class="logo-img">
-        <div class="brand-text">
-          <h2>GLOWROOT<br>WELLNESS</h2>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <img src="glowrootlogo.png" alt="Herbal Ayurvedic Panchakarma Massage Centre logo" width="68" height="68">
+        <div>
+          <h1>Herbal Ayurvedic Panchakarma<br>Massage Centre</h1>
+          <p>Gallery of wellness, massage, and homestay spaces</p>
         </div>
       </div>
-      <nav>
+      <nav class="nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html" style="color:#0f5132; border-bottom:2px solid #d4af37;">Gallery</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="services.html">Treatments</a>
+        <a class="active" href="gallery.html">Gallery</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="homestays.html">Homestays</a>
       </nav>
     </div>
   </header>
 
-  <div class="page-title">
-    <div class="container">
-      <h1>Photo Gallery</h1>
-      <p>Explore our Wellness Centers and Homestays</p>
-    </div>
-  </div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <span class="eyebrow">Photo Gallery</span>
+          <h2>Real views of the centre, therapy spaces, rooms, and homestay atmosphere.</h2>
+          <p>This gallery keeps the important visual details of the business together in one place. Guests can explore
+            the Herbal Ayurvedic Panchakarma Massage Centre, Glowroot Wellness interiors, massage sessions, Orchid
+            Homestay rooms, and Blue Light Guest House before making a direct enquiry.</p>
+          <p>The layout is designed to feel more like a polished WordPress hospitality site, while still loading
+            efficiently through clean image cards and lazy loading.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://wa.me/918943150767">Ask For Availability</a>
+            <a class="btn-secondary" href="rooms.html">View Rooms</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="container gallery-section">
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Wellness and Stay Gallery</h2>
+        <p class="section-intro">We kept all the main gallery groups so the site still shows the full business properly,
+          without losing the massage centre visuals or the stay photos.</p>
 
-    <div style="text-align: center;">
-      <h2 class="gallery-heading">Clinic Interiors</h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="images/clinic1.jpeg" alt="Clinic">
-        <div class="caption">Reception & Waiting</div>
-      </div>
-      <div class="gallery-item"><img src="images/clinic2.jpeg" alt="Clinic">
-        <div class="caption">Consultation Room</div>
-      </div>
-      <div class="gallery-item"><img src="images/clinic3.jpeg" alt="Clinic">
-        <div class="caption">Wellness Area</div>
-      </div>
-      <div class="gallery-item"><img src="images/clinic4.jpeg" alt="Clinic">
-        <div class="caption">Corridor View</div>
-      </div>
-      <div class="gallery-item"><img src="images/clinic5.jpeg" alt="Clinic">
-        <div class="caption">Interior Decor</div>
-      </div>
-      <div class="gallery-item"><img src="images/clinic6.jpeg" alt="Clinic">
-        <div class="caption">Relaxation Space</div>
-      </div>
-      <div class="gallery-item"><img src="images/clinic7.jpeg" alt="Clinic">
-        <div class="caption">Treatment Setup</div>
-      </div>
-      <div class="gallery-item"><img src="images/clinic8.jpeg" alt="Clinic">
-        <div class="caption">Facilities</div>
-      </div>
-    </div>
+        <div class="group">
+          <div class="group-head">
+            <h3>Clinic Interiors</h3>
+            <p>These photos show the reception, consultation, and wellness atmosphere that supports the main Ayurvedic
+              treatment identity of the centre.</p>
+          </div>
+          <div class="gallery-grid">
+            <article class="gallery-item"><img loading="lazy" src="images/clinic1.jpeg" alt="Reception and waiting area"><div class="caption"><strong>Reception & Waiting</strong><span>First impressions of the centre and guest arrival atmosphere.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/clinic2.jpeg" alt="Consultation room"><div class="caption"><strong>Consultation Room</strong><span>A quieter setting for therapy guidance and guest discussion.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/clinic3.jpeg" alt="Wellness area"><div class="caption"><strong>Wellness Area</strong><span>Clean and calm interior support for treatment visits.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/clinic4.jpeg" alt="Corridor view"><div class="caption"><strong>Corridor View</strong><span>A neat layout that keeps the centre feeling organised and comfortable.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/clinic5.jpeg" alt="Interior decor"><div class="caption"><strong>Interior Decor</strong><span>Simple presentation that fits the herbal wellness identity.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/clinic6.jpeg" alt="Relaxation space"><div class="caption"><strong>Relaxation Space</strong><span>A guest-friendly area for calmness before or after treatment.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/clinic7.jpeg" alt="Treatment setup"><div class="caption"><strong>Treatment Setup</strong><span>The therapy environment prepared for body care sessions.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/clinic8.jpeg" alt="Facilities"><div class="caption"><strong>Facilities View</strong><span>A visual summary of the centre's usable space and comfort.</span></div></article>
+          </div>
+        </div>
 
-    <div style="text-align: center; margin-top: 60px;">
-      <h2 class="gallery-heading">Massage & Therapies</h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="images/massage1.jpeg" alt="Massage">
-        <div class="caption">Full Body Massage</div>
-      </div>
-      <div class="gallery-item"><img src="images/massage2.jpeg" alt="Massage">
-        <div class="caption">Herbal Therapy</div>
-      </div>
-      <div class="gallery-item"><img src="images/massage3.jpeg" alt="Massage">
-        <div class="caption">Shirodhara</div>
-      </div>
-      <div class="gallery-item"><img src="images/massage4.jpeg" alt="Massage">
-        <div class="caption">Steam Bath</div>
-      </div>
-      <div class="gallery-item"><img src="images/massage5.jpeg" alt="Massage">
-        <div class="caption">Oil Treatment</div>
-      </div>
-      <div class="gallery-item"><img src="images/massage6.jpeg" alt="Massage">
-        <div class="caption">Back Massage</div>
-      </div>
-      <div class="gallery-item"><img src="images/massage7.jpeg" alt="Massage">
-        <div class="caption">Head Massage</div>
-      </div>
-      <div class="gallery-item"><img src="images/massage8.jpeg" alt="Massage">
-        <div class="caption">Leg Therapy</div>
-      </div>
-      <div class="gallery-item"><img src="images/massage9.jpeg" alt="Massage">
-        <div class="caption">Facial Care</div>
-      </div>
-      <div class="gallery-item"><img src="images/massage10.jpeg" alt="Massage">
-        <div class="caption">Ayurvedic Potli</div>
-      </div>
-      <div class="gallery-item"><img src="images/massage11.jpeg" alt="Massage">
-        <div class="caption">Relaxation</div>
-      </div>
-      <div class="gallery-item"><img src="images/massage12.jpeg" alt="Massage">
-        <div class="caption">Healing Therapy</div>
-      </div>
-    </div>
+        <div class="group">
+          <div class="group-head">
+            <h3>Massage and Therapies</h3>
+            <p>The main service is massage and Ayurvedic care, so this group remains a major part of the gallery and
+              supports the brand message clearly.</p>
+          </div>
+          <div class="gallery-grid">
+            <article class="gallery-item"><img loading="lazy" src="images/massage1.jpeg" alt="Full body massage"><div class="caption"><strong>Full Body Massage</strong><span>A popular relaxation option for visiting tourists.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/massage2.jpeg" alt="Herbal therapy"><div class="caption"><strong>Herbal Therapy</strong><span>A stronger Ayurvedic identity with local wellness character.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/massage3.jpeg" alt="Shirodhara"><div class="caption"><strong>Shirodhara</strong><span>One of the most requested and recognisable Ayurvedic therapies.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/massage4.jpeg" alt="Steam bath"><div class="caption"><strong>Steam Bath</strong><span>Useful as an add-on or supporting part of therapy care.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/massage5.jpeg" alt="Oil treatment"><div class="caption"><strong>Oil Treatment</strong><span>Medicated oil-based care for warmth, comfort, and relaxation.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/massage6.jpeg" alt="Back massage"><div class="caption"><strong>Back Massage</strong><span>Focused body care for fatigue after travel or activity.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/massage7.jpeg" alt="Head massage"><div class="caption"><strong>Head Massage</strong><span>A shorter therapy choice with a calming finish.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/massage8.jpeg" alt="Leg therapy"><div class="caption"><strong>Leg Therapy</strong><span>Helpful for guests after walks, tours, and road journeys.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/massage9.jpeg" alt="Facial care"><div class="caption"><strong>Facial Care</strong><span>A lighter treatment option for freshness and holiday glow.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/massage10.jpeg" alt="Ayurvedic potli therapy"><div class="caption"><strong>Ayurvedic Potli</strong><span>Herbal bundle style care for guests preferring traditional methods.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/massage11.jpeg" alt="Relaxation session"><div class="caption"><strong>Relaxation Session</strong><span>A softer, slower treatment mood with spa-style comfort.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/massage12.jpeg" alt="Healing therapy"><div class="caption"><strong>Healing Therapy</strong><span>Visual representation of the wellness side of the centre.</span></div></article>
+          </div>
+        </div>
 
-    <div style="text-align: center; margin-top: 60px;">
-      <h2 class="gallery-heading">Our Homestays</h2>
-    </div>
+        <div class="group">
+          <div class="group-head">
+            <h3>Orchid Homestay</h3>
+            <p>These images support the room and stay side of the business without taking attention away from the main
+              centre identity.</p>
+          </div>
+          <div class="gallery-grid">
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-1.jpeg" alt="Orchid exterior"><div class="caption"><strong>Exterior View</strong><span>A first look at the property's local and peaceful style.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-2.jpeg" alt="Orchid bedroom"><div class="caption"><strong>Bedroom View</strong><span>A comfortable room layout for holiday guests.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-3.jpeg" alt="Living area"><div class="caption"><strong>Living Area</strong><span>Part of the homestay atmosphere that feels more personal than a hotel.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-4.jpeg" alt="Interior room"><div class="caption"><strong>Room Interior</strong><span>A closer look at the calm and simple styling of the stay.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-5.jpeg" alt="Outside view"><div class="caption"><strong>Outside Area</strong><span>Shows the restful and uncluttered property surroundings.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-6.jpeg" alt="Building view"><div class="caption"><strong>Building View</strong><span>A fuller visual idea of the property and approach.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-7.jpeg" alt="Room view"><div class="caption"><strong>Room View</strong><span>Useful for couples and solo tourists wanting direct visual confirmation.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-8.jpeg" alt="Exterior detail"><div class="caption"><strong>Exterior Detail</strong><span>Another perspective of the homestay and access area.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-9.jpeg" alt="Property side"><div class="caption"><strong>Property Side</strong><span>Helps guests understand the local setting before arrival.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-10.jpeg" alt="Private room"><div class="caption"><strong>Private Room</strong><span>A practical room option for travellers on short stays.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-11.jpeg" alt="Restful room"><div class="caption"><strong>Restful Space</strong><span>A clean and straightforward room with a quiet holiday mood.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-12.jpeg" alt="Front perspective"><div class="caption"><strong>Front Perspective</strong><span>Wider look at the property from the outside.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-13.jpeg" alt="Additional Orchid view"><div class="caption"><strong>Additional View</strong><span>Extra visual support for guests comparing the room options.</span></div></article>
+          </div>
+        </div>
 
-    <h3 class="sub-heading">🏡 Orchid Homestay</h3>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="images/orchid-1.jpeg" alt="Orchid Exterior">
-        <div class="caption">Exterior View</div>
+        <div class="group">
+          <div class="group-head">
+            <h3>Blue Light Guest House</h3>
+            <p>The budget-friendly stay option also remains included so the site represents all parts of the business
+              honestly and fully.</p>
+          </div>
+          <div class="gallery-grid">
+            <article class="gallery-item"><img loading="lazy" src="images/bluelight-1.jpeg" alt="Blue Light exterior"><div class="caption"><strong>Exterior View</strong><span>The front look of Blue Light Guest House in Kumily.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/bluelight-2.jpeg" alt="Blue Light room"><div class="caption"><strong>Room View</strong><span>A simpler accommodation option for budget-conscious visitors.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/bluelight-3.jpeg" alt="Blue Light surroundings"><div class="caption"><strong>Surroundings</strong><span>Local atmosphere around the guest house and stay setting.</span></div></article>
+          </div>
+        </div>
       </div>
-      <div class="gallery-item">
-        <img src="images/orchid-2.jpeg" alt="Orchid Bedroom">
-        <div class="caption">Exterior View</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/orchid-3.jpeg" alt="Orchid Living">
-        <div class="caption">Living Area</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/orchid-4.jpeg" alt="Orchid Dining">
-        <div class="caption">Spa Room</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/orchid-5.jpeg" alt="Orchid Balcony">
-        <div class="caption">Exterior View</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/orchid-6.jpeg" alt="Orchid Garden">
-        <div class="caption">Exterior View</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/orchid-7.jpeg" alt="Orchid Exterior">
-        <div class="caption">Room View</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/orchid-8.jpeg" alt="Orchid Exterior">
-        <div class="caption">Exterior View</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/orchid-9.jpeg" alt="Orchid Exterior">
-        <div class="caption">Exterior View</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/orchid-10.jpeg" alt="Orchid Exterior">
-        <div class="caption">Room View</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/orchid-11.jpeg" alt="Orchid Exterior">
-        <div class="caption">Room View</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/orchid-12.jpeg" alt="Orchid Exterior">
-        <div class="caption">Exterior View</div>
-      </div>
-    </div>
-
-    <h3 class="sub-heading">🏡 Blue Light Guest House</h3>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="images/bluelight-1.jpeg" alt="Blue Light Front">
-        <div class="caption">Exterior View</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/bluelight-2.jpeg" alt="Blue Light Room">
-        <div class="caption">Exterior View</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/bluelight-3.jpeg" alt="Blue Light View">
-        <div class="caption">Surroundings</div>
-      </div>
-    </div>
-
-  </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2026 Glowroot Wellness | Thekkady, Kerala | Powered By MaxEfex</p>
+    <div class="container">© 2026 Herbal Ayurvedic Panchakarma Massage Centre, Glowroot Wellness, Orchid Homestay, and Blue Light Guest House.</div>
   </footer>
-
 </body>
 
 </html>
