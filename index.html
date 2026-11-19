@@ -7,20 +7,23 @@
   <meta name="description"
     content="Explore Ayurvedic massage, Panchakarma, Shirodhara and Kizhi in Kumily, Thekkady. See treatment rates or ask about availability on WhatsApp.">
   <title>Ayurvedic Massage in Kumily, Thekkady | Glowroot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap">
   <style>
     :root {
-      --green-deep: #2e5d3a;
-      --green-main: #5f8f62;
-      --green-soft: #e6f0e4;
-      --green-pale: #f5f9f1;
-      --cream: #fffaf1;
-      --cream-strong: #f3ead8;
-      --text: #2d332d;
-      --muted: #6b7368;
+      --rose-deep: #663241;
+      --gold: #9a6e48;
+      --blush: #f5e3e2;
+      --pink-pale: #fbefe9;
+      --cream: #fff9ef;
+      --cream-strong: #efe0cb;
+      --text: #382329;
+      --muted: #635154;
       --white: #ffffff;
-      --black: #141814;
-      --line: #dce6d8;
-      --shadow: 0 18px 55px rgba(41, 54, 40, 0.10);
+      --black: #352127;
+      --line: #e5d4c2;
+      --shadow: 0 18px 55px rgba(78, 43, 50, 0.10);
       --radius: 24px;
       --radius-sm: 18px;
       --max: 1180px;
@@ -39,8 +42,8 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(95, 143, 98, 0.12), transparent 26%),
-        linear-gradient(180deg, #fdfcf8 0%, #f6f8f1 100%);
+        radial-gradient(circle at top left, rgba(190, 130, 141, 0.12), transparent 26%),
+        linear-gradient(180deg, #fffaf4 0%, #f8ede6 100%);
     }
 
     img {
@@ -59,7 +62,7 @@
     }
 
     .topbar {
-      background: var(--green-deep);
+      background: var(--rose-deep);
       color: rgba(255, 255, 255, 0.92);
       font-size: 0.92rem;
     }
@@ -78,8 +81,8 @@
       z-index: 30;
       background: rgba(255, 250, 241, 0.96);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(220, 230, 216, 0.95);
-      box-shadow: 0 8px 24px rgba(46, 93, 58, 0.04);
+      border-bottom: 1px solid rgba(229, 212, 194, 0.95);
+      box-shadow: 0 8px 24px rgba(102, 50, 65, 0.04);
     }
 
     .header-row {
@@ -102,10 +105,10 @@
       height: 78px;
       object-fit: contain;
       border-radius: 24px;
-      background: linear-gradient(180deg, #ffffff, #f6f8f1);
-      box-shadow: 0 14px 30px rgba(46, 93, 58, 0.14);
+      background: linear-gradient(180deg, #ffffff, #f8ede6);
+      box-shadow: 0 14px 30px rgba(102, 50, 65, 0.14);
       padding: 6px;
-      border: 1px solid rgba(220, 230, 216, 0.95);
+      border: 1px solid rgba(229, 212, 194, 0.95);
     }
 
     .brand-copy {
@@ -119,7 +122,7 @@
       font-weight: 800;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--green-main);
+      color: var(--gold);
     }
 
     .brand h1 {
@@ -128,7 +131,7 @@
       font-size: 1.42rem;
       line-height: 1.02;
       letter-spacing: -0.01em;
-      color: #355f3d;
+      color: #783e50;
     }
 
     .brand p {
@@ -159,7 +162,7 @@
       bottom: 0;
       width: 100%;
       height: 2px;
-      background: rgba(95, 143, 98, 0.35);
+      background: rgba(190, 130, 141, 0.35);
       transform: scaleX(0);
       transform-origin: center;
       transition: transform 0.2s ease;
@@ -179,8 +182,7 @@
       gap: 24px;
     }
 
-    .hero-main,
-    .hero-side {
+    .hero-main {
       border-radius: 30px;
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
@@ -189,17 +191,9 @@
     .hero-main {
       padding: 46px;
       background:
-        radial-gradient(circle at top right, rgba(95, 143, 98, 0.10), transparent 28%),
+        radial-gradient(circle at top right, rgba(190, 130, 141, 0.10), transparent 28%),
         linear-gradient(140deg, rgba(255, 250, 241, 0.98), rgba(255, 255, 255, 0.98)),
         var(--white);
-    }
-
-    .hero-side {
-      padding: 24px;
-      background: var(--cream);
-      display: grid;
-      gap: 18px;
-      align-content: start;
     }
 
     .eyebrow {
@@ -207,8 +201,8 @@
       align-items: center;
       padding: 8px 14px;
       border-radius: 999px;
-      background: var(--green-soft);
-      color: var(--green-deep);
+      background: var(--blush);
+      color: var(--rose-deep);
       font-size: 0.86rem;
       font-weight: 800;
       letter-spacing: 0.08em;
@@ -221,13 +215,7 @@
       font-size: clamp(2.4rem, 4.2vw, 4.4rem);
       line-height: 0.98;
       letter-spacing: -0.025em;
-      color: var(--green-deep);
-    }
-
-    .hero-lead {
-      max-width: 660px;
-      font-size: 1.08rem;
-      color: #546052;
+      color: var(--rose-deep);
     }
 
     p {
@@ -236,26 +224,7 @@
       margin: 0 0 14px;
     }
 
-    .hero-points {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin: 28px 0;
-    }
 
-    .hero-points div {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-sm);
-      padding: 16px;
-    }
-
-    .hero-points strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--black);
-      font-size: 1rem;
-    }
 
     .cta-row {
       display: flex;
@@ -277,9 +246,9 @@
     }
 
     .btn {
-      background: var(--green-deep);
+      background: var(--rose-deep);
       color: var(--white);
-      box-shadow: 0 10px 22px rgba(46, 93, 58, 0.18);
+      box-shadow: 0 10px 22px rgba(102, 50, 65, 0.18);
     }
 
     .btn-secondary {
@@ -299,7 +268,7 @@
     }
 
     .side-card.primary {
-      background: linear-gradient(180deg, var(--green-deep), #23452c);
+      background: linear-gradient(180deg, var(--rose-deep), #492633);
       color: rgba(255, 255, 255, 0.94);
     }
 
@@ -336,7 +305,7 @@
       text-align: center;
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(1.8rem, 2.6vw, 2.7rem);
-      color: var(--green-deep);
+      color: var(--rose-deep);
     }
 
     .section-intro {
@@ -387,8 +356,8 @@
       margin-bottom: 12px;
       padding: 7px 12px;
       border-radius: 999px;
-      background: var(--green-soft);
-      color: var(--green-deep);
+      background: var(--blush);
+      color: var(--rose-deep);
       font-size: 0.84rem;
       font-weight: 800;
     }
@@ -396,7 +365,7 @@
     .price {
       font-size: 1.9rem;
       font-weight: 800;
-      color: var(--green-deep);
+      color: var(--rose-deep);
       margin: 14px 0 6px;
     }
 
@@ -439,7 +408,7 @@
     }
 
     .contact-panel {
-      background: linear-gradient(135deg, #29492f, #3e6844);
+      background: linear-gradient(135deg, #432631, #753c50);
       color: rgba(255, 255, 255, 0.94);
       padding: 34px;
     }
@@ -503,16 +472,16 @@
     }
 
     .contact-panel .btn {
-      background: #3a7247;
+      background: #713549;
       color: #ffffff;
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .contact-panel .btn-secondary {
-      background: #f5ecd9;
-      color: #1f2a1f;
-      border: 1px solid #e6d8ba;
-      box-shadow: 0 8px 18px rgba(20, 24, 20, 0.12);
+      background: #f4e5d0;
+      color: #382329;
+      border: 1px solid #dec49c;
+      box-shadow: 0 8px 18px rgba(56, 35, 41, 0.12);
     }
 
     footer {
@@ -531,10 +500,6 @@
         grid-template-columns: 1fr;
       }
 
-      .hero-points {
-        grid-template-columns: 1fr;
-      }
-
       .header-row {
         flex-direction: column;
         align-items: flex-start;
@@ -547,7 +512,6 @@
 
     @media (max-width: 680px) {
       .hero-main,
-      .hero-side,
       .card,
       .feature-panel,
       .contact-panel {
@@ -564,6 +528,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="assets/glowroot-theme.css">
   <link rel="canonical" href="https://glowroot.co.in/">
   <script type="application/ld+json">
 {
@@ -602,7 +567,7 @@
         </div>
       </div>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="/">Home</a>
+        <a href="/" aria-current="page">Home</a>
         <a href="services.html">Treatments</a>
         <a href="gallery.html">Gallery</a>
         <a href="rooms.html">Rooms</a>
@@ -613,33 +578,12 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero home-hero">
       <div class="container hero-grid">
         <div class="hero-main">
           <span class="eyebrow">Main Ayurvedic Centre In Kumily</span>
-          <h2>Authentic Panchakarma and premium Ayurvedic healing stay support in Thekkady.</h2>
-          <p class="hero-lead">Traditional Kerala therapies, thoughtful hosting, and practical tourist support come
-            together here for guests who want a more refined wellness experience in Kumily.</p>
-          <p>Herbal Ayurvedic Panchakarma Massage Centre is the main heart of this website. We welcome domestic and
-            international guests looking for genuine Kerala wellness, traditional therapies, calm healing space, and
-            practical local support in Kumily, Thekkady. Glowroot Wellness and Orchid Homestay help guests plan treatments, accommodation, and local travel.</p>
-          <p>Many tourists visit Kumily for Periyar, spice gardens, cool weather, and nature travel. With us, guests
-            can also enjoy body relaxation, Panchakarma-inspired care, certified therapist support, direct booking
-            communication, and peaceful accommodation options nearby.</p>
-          <div class="hero-points">
-            <div>
-              <strong>Ayurvedic Treatments</strong>
-              Panchakarma, herbal massage, relaxation care, facial, Shirodhara, Kizhi, and more.
-            </div>
-            <div>
-              <strong>Stay at Orchid Homestay</strong>
-              Ask about rooms at Orchid Homestay in Kumily.
-            </div>
-            <div>
-              <strong>Tourist Support</strong>
-              Help with pick-up, drop, reaching Kumily, room planning, and nearby attraction guidance.
-            </div>
-          </div>
+          <h2>Ayurvedic massage &amp; Panchakarma in Thekkady</h2>
+          <p>Explore traditional Kerala therapies in Kumily, including Shirodhara and Kizhi. Book a treatment directly or ask about staying at Orchid Homestay.</p>
           <div class="cta-row">
             <a class="btn" href="https://wa.me/918943150767?text=Hi%2C%20I%20found%20you%20on%20glowroot.co.in.%20Could%20you%20share%20treatment%20availability%20and%20rates%3F">Book a Treatment on WhatsApp</a>
             <a class="btn-secondary" href="tel:+918943150767">Call Now</a>
@@ -648,7 +592,12 @@
           </div>
         </div>
 
-        <aside class="hero-side">
+        <figure class="hero-illustration">
+          <img src="images/ayurveda-shirodhara.webp" width="1024" height="1536" alt="Brass Shirodhara vessel over a wood massage table with cream linen" fetchpriority="high" decoding="async">
+          <figcaption>AI illustration</figcaption>
+        </figure>
+      </div>
+      <aside class="container booking-notes">
           <div class="side-card primary">
             <h3>Direct Booking Offers</h3>
             <ul>
@@ -665,8 +614,7 @@
             <p><strong>Email:</strong> ayurvedicglowroot@gmail.com</p>
             <p><strong>Homestay Email:</strong> orchidhomestay46@gmail.com</p>
           </div>
-        </aside>
-      </div>
+      </aside>
     </section>
 
     <section class="section">

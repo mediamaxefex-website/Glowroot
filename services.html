@@ -7,20 +7,23 @@
   <meta name="description"
     content="Browse Ayurvedic massage and Panchakarma treatments in Kumily, including Shirodhara and Kizhi. See prices and ask about an appointment.">
   <title>Ayurvedic Massage Treatments &amp; Rates in Thekkady | Glowroot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap">
   <style>
     :root {
-      --green-deep: #2e5d3a;
-      --green-main: #5f8f62;
-      --green-soft: #e6f0e4;
-      --green-pale: #f5f9f1;
-      --cream: #fffaf1;
-      --cream-strong: #f3ead8;
-      --text: #2d332d;
-      --muted: #6b7368;
+      --rose-deep: #663241;
+      --gold: #9a6e48;
+      --blush: #f5e3e2;
+      --pink-pale: #fbefe9;
+      --cream: #fff9ef;
+      --cream-strong: #efe0cb;
+      --text: #382329;
+      --muted: #635154;
       --white: #ffffff;
-      --black: #141814;
-      --line: #dce6d8;
-      --shadow: 0 18px 55px rgba(41, 54, 40, 0.10);
+      --black: #352127;
+      --line: #e5d4c2;
+      --shadow: 0 18px 55px rgba(78, 43, 50, 0.10);
       --radius: 24px;
       --radius-sm: 18px;
       --max: 1180px;
@@ -34,15 +37,15 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(95, 143, 98, 0.12), transparent 26%),
-        linear-gradient(180deg, #fdfcf8 0%, #f6f8f1 100%);
+        radial-gradient(circle at top left, rgba(190, 130, 141, 0.12), transparent 26%),
+        linear-gradient(180deg, #fffaf4 0%, #f8ede6 100%);
     }
 
     a { color: inherit; text-decoration: none; }
     .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
 
     .topbar {
-      background: var(--green-deep);
+      background: var(--rose-deep);
       color: rgba(255, 255, 255, 0.92);
       font-size: 0.92rem;
     }
@@ -61,7 +64,7 @@
       z-index: 30;
       background: rgba(255, 250, 241, 0.96);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(220, 230, 216, 0.95);
+      border-bottom: 1px solid rgba(229, 212, 194, 0.95);
     }
 
     .header-row {
@@ -84,7 +87,7 @@
       object-fit: contain;
       border-radius: 20px;
       background: var(--white);
-      box-shadow: 0 10px 24px rgba(46, 93, 58, 0.12);
+      box-shadow: 0 10px 24px rgba(102, 50, 65, 0.12);
       padding: 4px;
     }
 
@@ -93,7 +96,7 @@
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.12rem;
       line-height: 1.18;
-      color: var(--green-deep);
+      color: var(--rose-deep);
     }
 
     .brand p { margin: 5px 0 0; font-size: 0.92rem; color: var(--muted); }
@@ -106,7 +109,7 @@
       font-weight: 700;
     }
 
-    .nav a.active { color: var(--green-deep); }
+    .nav a.active { color: var(--rose-deep); }
 
     .hero {
       padding: 56px 0 38px;
@@ -119,7 +122,6 @@
     }
 
     .hero-main,
-    .hero-side,
     .panel,
     .package-card,
     .contact-panel {
@@ -131,16 +133,8 @@
     .hero-main {
       padding: 40px;
       background:
-        linear-gradient(140deg, rgba(245, 249, 241, 0.97), rgba(255, 255, 255, 0.98)),
+        linear-gradient(140deg, rgba(251, 239, 233, 0.97), rgba(255, 255, 255, 0.98)),
         var(--white);
-    }
-
-    .hero-side {
-      padding: 24px;
-      background: var(--cream);
-      display: grid;
-      gap: 18px;
-      align-content: start;
     }
 
     .eyebrow {
@@ -148,8 +142,8 @@
       align-items: center;
       padding: 8px 14px;
       border-radius: 999px;
-      background: var(--green-soft);
-      color: var(--green-deep);
+      background: var(--blush);
+      color: var(--rose-deep);
       font-size: 0.86rem;
       font-weight: 800;
       letter-spacing: 0.08em;
@@ -158,7 +152,7 @@
 
     h2, h3 {
       font-family: Georgia, "Times New Roman", serif;
-      color: var(--green-deep);
+      color: var(--rose-deep);
     }
 
     .hero h2 {
@@ -192,7 +186,7 @@
     }
 
     .btn {
-      background: var(--green-deep);
+      background: var(--rose-deep);
       color: var(--white);
     }
 
@@ -208,7 +202,7 @@
     }
 
     .mini-card.primary {
-      background: linear-gradient(180deg, var(--green-deep), #23452c);
+      background: linear-gradient(180deg, var(--rose-deep), #492633);
       color: rgba(255, 255, 255, 0.94);
     }
 
@@ -264,15 +258,15 @@
     }
 
     th {
-      color: var(--green-deep);
-      background: var(--green-soft);
+      color: var(--rose-deep);
+      background: var(--blush);
       font-size: 0.92rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
     tr:last-child td { border-bottom: 0; }
-    .amount { font-weight: 800; color: var(--green-deep); white-space: nowrap; }
+    .amount { font-weight: 800; color: var(--rose-deep); white-space: nowrap; }
 
     .grid { display: grid; gap: 22px; }
     .three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -283,8 +277,8 @@
       margin-bottom: 12px;
       padding: 7px 12px;
       border-radius: 999px;
-      background: var(--green-soft);
-      color: var(--green-deep);
+      background: var(--blush);
+      color: var(--rose-deep);
       font-size: 0.84rem;
       font-weight: 800;
     }
@@ -299,7 +293,7 @@
     .price {
       font-size: 1.8rem;
       font-weight: 800;
-      color: var(--green-deep);
+      color: var(--rose-deep);
       margin: 12px 0 4px;
     }
 
@@ -331,11 +325,11 @@
     }
 
     .notice strong {
-      color: var(--green-deep);
+      color: var(--rose-deep);
     }
 
     .contact-panel {
-      background: linear-gradient(135deg, #29492f, #3e6844);
+      background: linear-gradient(135deg, #432631, #753c50);
       color: rgba(255, 255, 255, 0.94);
       padding: 34px;
     }
@@ -345,16 +339,16 @@
     .contact-panel a { color: inherit; }
 
     .contact-panel .btn {
-      background: #3a7247;
+      background: #713549;
       color: #ffffff;
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .contact-panel .btn-secondary {
-      background: #f5ecd9;
-      color: #1f2a1f;
-      border: 1px solid #e6d8ba;
-      box-shadow: 0 8px 18px rgba(20, 24, 20, 0.12);
+      background: #f4e5d0;
+      color: #382329;
+      border: 1px solid #dec49c;
+      box-shadow: 0 8px 18px rgba(56, 35, 41, 0.12);
     }
 
     footer {
@@ -379,7 +373,6 @@
 
     @media (max-width: 680px) {
       .hero-main,
-      .hero-side,
       .table-wrap,
       .panel,
       .package-card,
@@ -388,6 +381,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="assets/glowroot-theme.css">
   <link rel="canonical" href="https://glowroot.co.in/services.html">
 </head>
 
@@ -411,7 +405,7 @@
       </div>
       <nav class="nav" aria-label="Primary navigation">
         <a href="/">Home</a>
-        <a class="active" href="services.html">Treatments</a>
+        <a href="services.html" aria-current="page">Treatments</a>
         <a href="gallery.html">Gallery</a>
         <a href="rooms.html">Rooms</a>
         <a href="homestays.html">Homestays</a>
@@ -424,19 +418,19 @@
       <div class="container hero-shell">
         <div class="hero-main">
           <span class="eyebrow">Treatment Menu</span>
-          <h2>Clear therapy rates, more complete wellness descriptions, and direct booking confidence.</h2>
-          <p>This page presents the core treatment list of Herbal Ayurvedic Panchakarma Massage Centre in a cleaner and
-            more useful format. Guests often want to compare therapies quickly, understand durations, and know which
-            sessions are best for relaxation, traditional Ayurveda, deep pressure, or skin freshness care.</p>
-          <p>We have kept the important rates visible and added better descriptions around treatment purpose, special
-            packages, and direct booking value so the page feels more complete for both domestic tourists and foreign
-            travellers.</p>
+          <h2>Ayurvedic treatments &amp; rates</h2>
+          <p>Browse massage, Shirodhara, Kizhi, and other treatments at Herbal Ayurvedic Panchakarma Massage Centre. Compare durations and rates before arranging your visit.</p>
           <div class="cta-row">
             <a class="btn" href="https://wa.me/918943150767?text=Hi%2C%20I%20found%20you%20on%20glowroot.co.in.%20Could%20you%20share%20treatment%20availability%20and%20rates%3F">Book A Treatment</a>
             <a class="btn-secondary" href="tel:+918943150767">Call For Advice</a>
           </div>
         </div>
-        <aside class="hero-side">
+        <figure class="hero-illustration">
+          <img src="images/ayurveda-kizhi.webp" width="1672" height="941" alt="Herbal Kizhi bundles, Ayurvedic oil and fresh leaves on rose linen" fetchpriority="high" decoding="async">
+          <figcaption>AI illustration</figcaption>
+        </figure>
+      </div>
+      <aside class="container booking-notes">
           <div class="mini-card primary">
             <h3>Most Requested</h3>
             <ul>
@@ -451,8 +445,7 @@
             <p>For the most suitable therapy, guests can contact us before arriving. We help first-time visitors choose
               treatments based on travel fatigue, comfort preference, and available time in Kumily.</p>
           </div>
-        </aside>
-      </div>
+      </aside>
     </section>
 
     <section class="section">

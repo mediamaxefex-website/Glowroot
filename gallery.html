@@ -7,18 +7,21 @@
   <meta name="description"
     content="Gallery of Herbal Ayurvedic Panchakarma Massage Centre, Glowroot Wellness, and Orchid Homestay in Kumily.">
   <title>Ayurvedic Massage Centre Photo Gallery | Glowroot, Kumily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap">
   <style>
     :root {
-      --green-deep: #2e5d3a;
-      --green-main: #5f8f62;
-      --green-soft: #e6f0e4;
-      --green-pale: #f5f9f1;
-      --cream: #fffaf1;
-      --text: #2d332d;
-      --muted: #6b7368;
+      --rose-deep: #663241;
+      --gold: #9a6e48;
+      --blush: #f5e3e2;
+      --pink-pale: #fbefe9;
+      --cream: #fff9ef;
+      --text: #382329;
+      --muted: #635154;
       --white: #ffffff;
-      --line: #dce6d8;
-      --shadow: 0 18px 55px rgba(41, 54, 40, 0.10);
+      --line: #e5d4c2;
+      --shadow: 0 18px 55px rgba(78, 43, 50, 0.10);
       --radius: 24px;
       --max: 1200px;
     }
@@ -29,8 +32,8 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(95, 143, 98, 0.12), transparent 26%),
-        linear-gradient(180deg, #fdfcf8 0%, #f6f8f1 100%);
+        radial-gradient(circle at top left, rgba(190, 130, 141, 0.12), transparent 26%),
+        linear-gradient(180deg, #fffaf4 0%, #f8ede6 100%);
     }
 
     img { max-width: 100%; display: block; }
@@ -38,7 +41,7 @@
     .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
 
     .topbar {
-      background: var(--green-deep);
+      background: var(--rose-deep);
       color: rgba(255, 255, 255, 0.92);
       font-size: 0.92rem;
     }
@@ -57,7 +60,7 @@
       z-index: 30;
       background: rgba(255, 250, 241, 0.96);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(220, 230, 216, 0.95);
+      border-bottom: 1px solid rgba(229, 212, 194, 0.95);
     }
 
     .header-row {
@@ -80,7 +83,7 @@
       object-fit: contain;
       border-radius: 20px;
       background: var(--white);
-      box-shadow: 0 10px 24px rgba(46, 93, 58, 0.12);
+      box-shadow: 0 10px 24px rgba(102, 50, 65, 0.12);
       padding: 4px;
     }
 
@@ -89,7 +92,7 @@
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.12rem;
       line-height: 1.18;
-      color: var(--green-deep);
+      color: var(--rose-deep);
     }
 
     .brand p { margin: 5px 0 0; font-size: 0.92rem; color: var(--muted); }
@@ -102,7 +105,7 @@
       font-weight: 700;
     }
 
-    .nav a.active { color: var(--green-deep); }
+    .nav a.active { color: var(--rose-deep); }
 
     .hero {
       padding: 56px 0 38px;
@@ -114,7 +117,7 @@
       box-shadow: var(--shadow);
       padding: 40px;
       background:
-        linear-gradient(140deg, rgba(245, 249, 241, 0.97), rgba(255, 255, 255, 0.98)),
+        linear-gradient(140deg, rgba(251, 239, 233, 0.97), rgba(255, 255, 255, 0.98)),
         var(--white);
     }
 
@@ -123,8 +126,8 @@
       align-items: center;
       padding: 8px 14px;
       border-radius: 999px;
-      background: var(--green-soft);
-      color: var(--green-deep);
+      background: var(--blush);
+      color: var(--rose-deep);
       font-size: 0.86rem;
       font-weight: 800;
       letter-spacing: 0.08em;
@@ -133,7 +136,7 @@
 
     h2, h3 {
       font-family: Georgia, "Times New Roman", serif;
-      color: var(--green-deep);
+      color: var(--rose-deep);
     }
 
     .hero h2 {
@@ -166,7 +169,7 @@
       font-weight: 700;
     }
 
-    .btn { background: var(--green-deep); color: var(--white); }
+    .btn { background: var(--rose-deep); color: var(--white); }
     .btn-secondary { background: var(--white); color: var(--text); border: 1px solid var(--line); }
 
     .section { padding: 34px 0; }
@@ -226,7 +229,7 @@
       width: 100%;
       height: 255px;
       object-fit: cover;
-      background: #eef3eb;
+      background: #f7eae5;
     }
 
     .caption {
@@ -270,6 +273,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="assets/glowroot-theme.css">
   <link rel="canonical" href="https://glowroot.co.in/gallery.html">
 </head>
 
@@ -294,7 +298,7 @@
       <nav class="nav" aria-label="Primary navigation">
         <a href="/">Home</a>
         <a href="services.html">Treatments</a>
-        <a class="active" href="gallery.html">Gallery</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
         <a href="rooms.html">Rooms</a>
         <a href="homestays.html">Homestays</a>
       </nav>
@@ -303,20 +307,20 @@
 
   <main>
     <section class="hero">
-      <div class="container">
+      <div class="container hero-split">
         <div class="hero-box">
           <span class="eyebrow">Photo Gallery</span>
-          <h2>Real views of the centre, therapy spaces, rooms, and homestay atmosphere.</h2>
-          <p>This gallery keeps the important visual details of the business together in one place. Guests can explore
-            the Herbal Ayurvedic Panchakarma Massage Centre, Glowroot Wellness interiors, massage sessions, Orchid
-            Homestay rooms before making a direct enquiry.</p>
-          <p>The layout is designed to feel more like a polished WordPress hospitality site, while still loading
-            efficiently through clean image cards and lazy loading.</p>
+          <h2>The centre and Orchid Homestay in photos</h2>
+          <p>See photos of the treatment spaces, massage sessions, and Orchid Homestay rooms in Kumily.</p>
           <div class="cta-row">
             <a class="btn" href="https://wa.me/918943150767?text=Hi%2C%20I%20found%20you%20on%20glowroot.co.in.%20Could%20you%20share%20treatment%20availability%20and%20rates%3F">Ask For Availability</a>
             <a class="btn-secondary" href="rooms.html">View Rooms</a>
           </div>
         </div>
+        <figure class="hero-illustration">
+          <img src="images/ayurveda-lotus.webp" width="1536" height="1024" alt="Lotus petals floating in a brass bowl beside ivory linen" fetchpriority="high" decoding="async">
+          <figcaption>AI illustration</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -333,13 +337,13 @@
               treatment identity of the centre.</p>
           </div>
           <div class="gallery-grid">
-            <article class="gallery-item"><img loading="lazy" src="images/clinic1.jpeg" alt="Reception and waiting area"><div class="caption"><strong>Reception & Waiting</strong><span>First impressions of the centre and guest arrival atmosphere.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/clinic1-enhanced.webp" alt="Reception and waiting area"><div class="caption"><strong>Reception & Waiting</strong><span>First impressions of the centre and guest arrival atmosphere.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/clinic2.jpeg" alt="Consultation room"><div class="caption"><strong>Consultation Room</strong><span>A quieter setting for therapy guidance and guest discussion.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/clinic3.jpeg" alt="Wellness area"><div class="caption"><strong>Wellness Area</strong><span>Clean and calm interior support for treatment visits.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/clinic4.jpeg" alt="Corridor view"><div class="caption"><strong>Corridor View</strong><span>A neat layout that keeps the centre feeling organised and comfortable.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/clinic5.jpeg" alt="Interior decor"><div class="caption"><strong>Interior Decor</strong><span>Simple presentation that fits the herbal wellness identity.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/clinic6.jpeg" alt="Relaxation space"><div class="caption"><strong>Relaxation Space</strong><span>A guest-friendly area for calmness before or after treatment.</span></div></article>
-            <article class="gallery-item"><img loading="lazy" src="images/clinic7.jpeg" alt="Treatment setup"><div class="caption"><strong>Treatment Setup</strong><span>The therapy environment prepared for body care sessions.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/clinic7-enhanced.webp" alt="Treatment setup"><div class="caption"><strong>Treatment Setup</strong><span>The therapy environment prepared for body care sessions.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/clinic8.jpeg" alt="Facilities"><div class="caption"><strong>Facilities View</strong><span>A visual summary of the centre's usable space and comfort.</span></div></article>
           </div>
         </div>
@@ -374,15 +378,15 @@
           </div>
           <div class="gallery-grid">
             <article class="gallery-item"><img loading="lazy" src="images/orchid-1.jpeg" alt="Orchid exterior"><div class="caption"><strong>Exterior View</strong><span>A first look at the property's local and peaceful style.</span></div></article>
-            <article class="gallery-item"><img loading="lazy" src="images/orchid-2.jpeg" alt="Orchid bedroom"><div class="caption"><strong>Bedroom View</strong><span>A comfortable room layout for holiday guests.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-2-enhanced.webp" alt="Veranda at Orchid Homestay"><div class="caption"><strong>Veranda View</strong><span>Columned veranda and courtyard at Orchid Homestay.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/orchid-3.jpeg" alt="Living area"><div class="caption"><strong>Living Area</strong><span>Part of the homestay atmosphere that feels more personal than a hotel.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/orchid-4.jpeg" alt="Interior room"><div class="caption"><strong>Room Interior</strong><span>A closer look at the calm and simple styling of the stay.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/orchid-5.jpeg" alt="Outside view"><div class="caption"><strong>Outside Area</strong><span>Shows the restful and uncluttered property surroundings.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/orchid-6.jpeg" alt="Building view"><div class="caption"><strong>Building View</strong><span>A fuller visual idea of the property and approach.</span></div></article>
-            <article class="gallery-item"><img loading="lazy" src="images/orchid-7.jpeg" alt="Room view"><div class="caption"><strong>Room View</strong><span>Useful for couples and solo tourists wanting direct visual confirmation.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-7-enhanced.webp" alt="Room view"><div class="caption"><strong>Room View</strong><span>Useful for couples and solo tourists wanting direct visual confirmation.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/orchid-8.jpeg" alt="Exterior detail"><div class="caption"><strong>Exterior Detail</strong><span>Another perspective of the homestay and access area.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/orchid-9.jpeg" alt="Property side"><div class="caption"><strong>Property Side</strong><span>Helps guests understand the local setting before arrival.</span></div></article>
-            <article class="gallery-item"><img loading="lazy" src="images/orchid-10.jpeg" alt="Private room"><div class="caption"><strong>Private Room</strong><span>A practical room option for travellers on short stays.</span></div></article>
+            <article class="gallery-item"><img loading="lazy" src="images/orchid-10-enhanced.webp" alt="Private room"><div class="caption"><strong>Private Room</strong><span>A practical room option for travellers on short stays.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/orchid-11.jpeg" alt="Restful room"><div class="caption"><strong>Restful Space</strong><span>A clean and straightforward room with a quiet holiday mood.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/orchid-12.jpeg" alt="Front perspective"><div class="caption"><strong>Front Perspective</strong><span>Wider look at the property from the outside.</span></div></article>
             <article class="gallery-item"><img loading="lazy" src="images/orchid-13.jpeg" alt="Additional Orchid view"><div class="caption"><strong>Additional View</strong><span>Extra visual support for guests comparing the room options.</span></div></article>
